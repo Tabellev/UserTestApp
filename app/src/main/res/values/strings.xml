@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">GuiTestApp</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+    <string name="swipe_to_start">&lt;&lt;&lt;Swipe to start when instructed&lt;&lt;&lt;</string>
+    <string name="one_choice_question">What is your quest?</string>
+    <string name="answer_option_one">Morra di!</string>
+    <string name="answer_option_two">Faren din!</string>
+    <string name="answer_dont_know">Dont know</string>
+
+    <string-array name="questions">
+        <item>How many condensate pumps are running on turbine 31?</item>
+        <item>How many condensate pumps are running on turbine 32?</item>
+        <item>How many condensate pumps are running on turbine 33?</item>
+        <item>How many condensate pumps are running on turbine 34?</item>
+        <item>How many condensate pumps are running on turbine 35?</item>
+        <item>How many condensate pumps are running on turbine 36?</item>
+        <item>How many condensate pumps are running on turbine 37?</item>
+        <item>How many condensate pumps are running on turbine 38?</item>
+        <item>How many condensate pumps are running on turbine 39?</item>
+        <item>How many condensate pumps are running on turbine 40?</item>
+    </string-array>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+</resources>
