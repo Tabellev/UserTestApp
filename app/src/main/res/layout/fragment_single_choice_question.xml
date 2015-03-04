@@ -16,21 +16,32 @@
         style="@style/ButtonAnswerStyle"
         android:text="@string/answer_option_one"
         android:id="@+id/btnAnswerOption1"
+        android:layout_marginStart="315dp"
         android:layout_centerVertical="true"
-        android:layout_alignStart="@+id/singleAnswerQuestion" />
+        android:layout_alignParentStart="true"
+        android:onClick="btnAnswerOption1Clicked"/>
 
     <Button
         style="@style/ButtonAnswerStyle"
         android:text="@string/answer_option_two"
         android:id="@+id/btnAnswerOption2"
+        android:layout_marginStart="188dp"
         android:layout_alignTop="@+id/btnAnswerOption1"
-        android:layout_alignEnd="@+id/singleAnswerQuestion" />
+        android:layout_toEndOf="@+id/btnAnswerOption1"
+        android:onClick="btnAnswerOption2Clicked"/>
 
     <Button
         style="@style/ButtonDontKnowStyle"
         android:text="@string/answer_dont_know"
-        android:id="@+id/button"
-        android:layout_marginEnd="77dp"
+        android:id="@+id/singleDontKnow"
         android:layout_alignParentBottom="true"
         android:layout_alignParentEnd="true" />
+
+    <TextView
+       style="@style/TextFieldSwipeStyle"
+        android:text="@string/swipe_to_continue"
+        android:id="@+id/singleChoiceContinue"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:visibility="invisible"/>
 </RelativeLayout>

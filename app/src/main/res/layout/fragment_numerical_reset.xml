@@ -1,0 +1,128 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    style="@style/FragmentStyle"
+    tools:context="com.example.isabel.usertestapp.NumericalInputFragment">
+
+
+    <TextView
+        style="@style/TextFieldStyle"
+        android:text="@string/numerical_question"
+        android:id="@+id/numericalResetQuestion"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="77dp" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:id="@+id/resetInputText"
+        android:layout_marginTop="59dp"
+        android:layout_below="@+id/numericalResetQuestion"
+        android:layout_centerHorizontal="true"
+        android:textAlignment="center"
+        android:textSize="30sp"
+        style="@style/AppTheme" />
+
+    <Button
+        style="@style/ButtonNumberStyle"
+        android:text="@string/zero"
+        android:id="@+id/btnResetZero"
+        android:layout_alignTop="@+id/btnResetOne"
+        android:layout_toStartOf="@+id/btnResetOne" />
+
+    <Button
+        style="@style/ButtonNumberStyle"
+        android:text="@string/one"
+        android:id="@+id/btnResetOne"
+        android:layout_above="@+id/btnResetSix"
+        android:layout_alignStart="@+id/numericalResetQuestion" />
+
+    <Button
+        style="@style/ButtonNumberStyle"
+        android:text="@string/two"
+        android:id="@+id/btnResetTwo"
+        android:layout_alignTop="@+id/btnResetOne"
+        android:layout_toEndOf="@+id/btnResetOne" />
+
+    <Button
+        style="@style/ButtonNumberStyle"
+        android:text="@string/three"
+        android:id="@+id/btnResetThree"
+        android:layout_alignBottom="@+id/btnResetTwo"
+        android:layout_toEndOf="@+id/btnResetTwo" />
+
+
+    <Button
+        style="@style/ButtonNumberStyle"
+        android:text="@string/four"
+        android:id="@+id/btnResetFour"
+        android:layout_alignTop="@+id/btnResetThree"
+        android:layout_alignStart="@+id/btnResetNine" />
+
+    <Button
+        style="@style/ButtonNumberStyleBottom"
+        android:text="@string/five"
+        android:id="@+id/btnResetFive"
+        android:layout_above="@+id/btnResetDontKnow"
+        android:layout_alignStart="@+id/btnResetZero" />
+
+    <Button
+        style="@style/ButtonNumberStyleBottom"
+        android:text="@string/six"
+        android:id="@+id/btnResetSix"
+        android:layout_alignBottom="@+id/btnResetFive"
+        android:layout_alignStart="@+id/btnResetOne" />
+
+    <Button
+        style="@style/ButtonNumberStyleBottom"
+        android:text="@string/seven"
+        android:id="@+id/btnResetSeven"
+        android:layout_alignBottom="@+id/btnResetSix"
+        android:layout_alignStart="@+id/btnResetTwo" />
+
+    <Button
+        style="@style/ButtonNumberStyleBottom"
+        android:text="@string/eight"
+        android:id="@+id/btnResetEight"
+        android:layout_alignBottom="@+id/btnResetSeven"
+        android:layout_alignStart="@+id/btnResetThree" />
+
+    <Button
+        style="@style/ButtonNumberStyleBottom"
+        android:text="@string/nine"
+        android:id="@+id/btnResetNine"
+        android:layout_alignBottom="@+id/btnResetEight"
+        android:layout_toEndOf="@+id/btnResetEight" />
+
+    <Button
+        style="@style/ButtonNumberStyleBottom"
+        android:text="@string/point"
+        android:id="@+id/btnResetPoint"
+        android:layout_alignBottom="@+id/btnResetNine"
+        android:layout_toEndOf="@+id/btnResetNine" />
+
+    <Button
+        style="@style/ButtonDontKnowStyle"
+        android:text="@string/answer_dont_know"
+        android:id="@+id/btnResetDontKnow"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true" />
+
+    <TextView
+        style="@style/TextFieldSwipeStyle"
+        android:text="@string/swipe_to_continue"
+        android:id="@+id/numericalResetContinue"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:visibility="invisible"/>
+
+    <ImageButton
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:id="@+id/btnReset"
+        android:background="@android:drawable/ic_notification_clear_all"
+        android:layout_alignTop="@+id/resetInputText"
+        android:layout_toStartOf="@+id/btnResetFour" />
+
+</RelativeLayout>

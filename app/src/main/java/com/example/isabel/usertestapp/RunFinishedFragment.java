@@ -1,6 +1,5 @@
 package com.example.isabel.usertestapp;
 
-
 import android.os.Bundle;
 import android.app.Fragment;
 import android.view.LayoutInflater;
@@ -8,20 +7,19 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.RelativeLayout;
 
-
-public class StartScreenFragment extends android.support.v4.app.Fragment {
+public class RunFinishedFragment extends android.support.v4.app.Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         if (container == null) {
             return null;
         }
-        return (RelativeLayout)inflater.inflate(R.layout.fragment_start_screen, container, false);
+        return (RelativeLayout)inflater.inflate(R.layout.fragment_run_finished, container, false);
     }
 
-    public StartScreenFragment(){}
+    public RunFinishedFragment(){}
 
-    public static StartScreenFragment newInstance(int index) {
-        StartScreenFragment f = new StartScreenFragment();
+    public static RunFinishedFragment newInstance(int index) {
+        RunFinishedFragment f = new RunFinishedFragment();
         Bundle args = new Bundle();
         args.putInt("index", index);
         f.setArguments(args);

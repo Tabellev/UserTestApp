@@ -1,30 +1,85 @@
 package com.example.isabel.usertestapp;
 
-import android.app.Activity;
-import android.net.Uri;
+import android.graphics.Color;
 import android.os.Bundle;
-import android.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.LinearLayout;
+import android.widget.Button;
 import android.widget.RelativeLayout;
+import android.widget.TextView;
 
 
 public class SingleChoiceQuestionFragment extends android.support.v4.app.Fragment {
+
+    private Boolean option1isClicked = false;
+    private Boolean option2isClicked = false;
+    private Boolean dontKnowIsClicked = false;
+
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         if (container == null) {
-            // We have different layouts, and in one of them this
-            // fragment's containing frame doesn't exist.  The fragment
-            // may still be created from its saved state, but there is
-            // no reason to try to create its view hierarchy because it
-            // won't be displayed.  Note this is not needed -- we could
-            // just run the code below, where we would create and return
-            // the view hierarchy; it would just never be used.
             return null;
         }
-        return (RelativeLayout)inflater.inflate(R.layout.fragment_single_choice_question, container, false);
+         View view = (RelativeLayout)inflater.inflate(R.layout.fragment_single_choice_question, container, false);
+        final Button btnOption1 = (Button)view.findViewById(R.id.btnAnswerOption1);
+        final Button btnOption2 = (Button) view.findViewById(R.id.btnAnswerOption2);
+        final Button dontKnow = (Button) view.findViewById(R.id.singleDontKnow);
+        final TextView swipe = (TextView) view.findViewById(R.id.singleChoiceContinue);
+        btnOption1.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                if(!option1isClicked){
+                    btnOption1.setBackgroundColor(Color.argb(255,255,52,189));
+                    btnOption2.setEnabled(false);
+                    dontKnow.setEnabled(false);
+                    swipe.setVisibility(View.VISIBLE);
+                    option1isClicked = true;
+                }else{
+                    btnOption1.setBackgroundColor(getResources().getColor(R.color.button_material_light));
+                    btnOption2.setEnabled(true);
+                    dontKnow.setEnabled(true);
+                    option1isClicked = false;
+                }
+
+            }
+        });
+
+        btnOption2.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                if(!option2isClicked){
+                    btnOption2.setBackgroundColor(Color.argb(255,255,52,189));
+                    btnOption1.setEnabled(false);
+                    dontKnow.setEnabled(false);
+                    swipe.setVisibility(View.VISIBLE);
+                    option2isClicked = true;
+                }else{
+                    btnOption2.setBackgroundColor(getResources().getColor(R.color.button_material_light));
+                    btnOption1.setEnabled(true);
+                    dontKnow.setEnabled(true);
+                    option2isClicked = false;
+                }
+
+            }
+        });
+
+        dontKnow.setOnClickListener(new View.OnClickListener(){
+            public void onClick(View v){
+                if(!dontKnowIsClicked){
+                    dontKnow.setBackgroundColor(Color.argb(255,255,52,189));
+                    btnOption1.setEnabled(false);
+                    btnOption2.setEnabled(false);
+                    swipe.setVisibility(View.VISIBLE);
+                    dontKnowIsClicked = true;
+                }else{
+                    dontKnow.setBackgroundColor(getResources().getColor(R.color.button_material_light));
+                    btnOption1.setEnabled(true);
+                    btnOption2.setEnabled(true);
+                    dontKnowIsClicked = false;
+                }
+            }
+        });
+
+        return  view;
     }
 
     public SingleChoiceQuestionFragment(){}
@@ -36,6 +91,8 @@ public class SingleChoiceQuestionFragment extends android.support.v4.app.Fragmen
         f.setArguments(args);
         return f;
     }
+
+
 
 
 }

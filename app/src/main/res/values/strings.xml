@@ -2,13 +2,33 @@
 <resources>
 
     <string name="app_name">GuiTestApp</string>
-    <string name="hello_world">Hello world!</string>
     <string name="action_settings">Settings</string>
     <string name="swipe_to_start">&lt;&lt;&lt;Swipe to start when instructed&lt;&lt;&lt;</string>
+    <string name="run_finished">Run finished!</string>
+    <string name="swipe_to_next_run">&lt;&lt;&lt;Swipe to start next run when instructed&lt;&lt;&lt;</string>
+    <string name="swipe_to_continue">&lt;&lt;&lt;Swipe to continue&lt;&lt;&lt;</string>
     <string name="one_choice_question">What is your quest?</string>
+    <string name="mutiple_choice_question">What are the three coolest houses at Hogwarts?</string>
+    <string name="numerical_question">What is 5 divided by 2?</string>
     <string name="answer_option_one">Morra di!</string>
     <string name="answer_option_two">Faren din!</string>
     <string name="answer_dont_know">Dont know</string>
+    <string name="griffindor">Gryffindor</string>
+    <string name="slytherin">Slytherin</string>
+    <string name="rawenclaw">Rawenclaw</string>
+    <string name="huffelpuff">Huffelpuff</string>
+    <string name="zero">0</string>
+    <string name="one">1</string>
+    <string name="two">2</string>
+    <string name="three">3</string>
+    <string name="four">4</string>
+    <string name="five">5</string>
+    <string name="six">6</string>
+    <string name="seven">7</string>
+    <string name="eight">8</string>
+    <string name="nine">9</string>
+    <string name="point">.</string>
+    <string name="backspace">&lt;--</string>
 
     <string-array name="questions">
         <item>How many condensate pumps are running on turbine 31?</item>
