@@ -146,7 +146,7 @@ public class NumericalResetFragment extends android.support.v4.app.Fragment {
             public void onClick(View v) {
 
                 if(!dontKnowIsClicked){
-                    dontKnow.setBackgroundColor(Color.argb(255,255,52,189));
+                    dontKnow.setBackgroundColor(Color.rgb(7, 147, 194));
                     btn0.setEnabled(false);
                     btn1.setEnabled(false);
                     btn2.setEnabled(false);
@@ -163,7 +163,7 @@ public class NumericalResetFragment extends android.support.v4.app.Fragment {
                     swipe.setVisibility(View.VISIBLE);
                     dontKnowIsClicked = true;
                 }else{
-                    dontKnow.setBackgroundColor(getResources().getColor(R.color.button_material_light));
+                    dontKnow.setBackgroundColor(Color.rgb(160,200,220));
                     btn0.setEnabled(true);
                     btn1.setEnabled(true);
                     btn2.setEnabled(true);

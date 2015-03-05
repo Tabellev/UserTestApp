@@ -6,7 +6,7 @@
 
     <TextView
         style="@style/TextFieldStyle"
-        android:text="@string/numerical_question"
+        android:text="@string/numerical_question_reset"
         android:id="@+id/numericalResetQuestion"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"

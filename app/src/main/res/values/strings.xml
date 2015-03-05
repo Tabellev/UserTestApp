@@ -7,11 +7,12 @@
     <string name="run_finished">Run finished!</string>
     <string name="swipe_to_next_run">&lt;&lt;&lt;Swipe to start next run when instructed&lt;&lt;&lt;</string>
     <string name="swipe_to_continue">&lt;&lt;&lt;Swipe to continue&lt;&lt;&lt;</string>
-    <string name="one_choice_question">What is your quest?</string>
+    <string name="one_choice_question">Do you like Android?</string>
     <string name="mutiple_choice_question">What are the three coolest houses at Hogwarts?</string>
     <string name="numerical_question">What is 5 divided by 2?</string>
-    <string name="answer_option_one">Morra di!</string>
-    <string name="answer_option_two">Faren din!</string>
+    <string name="numerical_question_reset">What is the value of Pi?</string>
+    <string name="answer_option_one">Yes</string>
+    <string name="answer_option_two">No</string>
     <string name="answer_dont_know">Dont know</string>
     <string name="griffindor">Gryffindor</string>
     <string name="slytherin">Slytherin</string>

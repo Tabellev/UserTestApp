@@ -35,12 +35,12 @@ public class MultipleChoiceFragment extends android.support.v4.app.Fragment {
         btnOption1.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
                 if(!option1isClicked){
-                    btnOption1.setBackgroundColor(Color.argb(255, 255, 52, 189));
+                    btnOption1.setBackgroundColor(Color.rgb(7, 147, 194));
                     dontKnow.setEnabled(false);
                     swipe.setVisibility(View.VISIBLE);
                     option1isClicked = true;
                 }else{
-                    btnOption1.setBackgroundColor(getResources().getColor(R.color.button_material_light));
+                    btnOption1.setBackgroundColor(Color.rgb(160,200,220));
                     option1isClicked = false;
                     if(!option1isClicked && !option2isClicked && !option3isClicked && !option4isClicked){
                         dontKnow.setEnabled(true);
@@ -53,12 +53,12 @@ public class MultipleChoiceFragment extends android.support.v4.app.Fragment {
         btnOption2.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
                 if(!option2isClicked){
-                    btnOption2.setBackgroundColor(Color.argb(255, 255, 52, 189));
+                    btnOption2.setBackgroundColor(Color.rgb(7, 147, 194));
                     dontKnow.setEnabled(false);
                     swipe.setVisibility(View.VISIBLE);
                     option2isClicked = true;
                 }else{
-                    btnOption2.setBackgroundColor(getResources().getColor(R.color.button_material_light));
+                    btnOption2.setBackgroundColor(Color.rgb(160,200,220));
                     option2isClicked = false;
                     if(!option1isClicked && !option2isClicked && !option3isClicked && !option4isClicked){
                         dontKnow.setEnabled(true);
@@ -71,12 +71,12 @@ public class MultipleChoiceFragment extends android.support.v4.app.Fragment {
         btnOption3.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
                 if(!option3isClicked){
-                    btnOption3.setBackgroundColor(Color.argb(255, 255, 52, 189));
+                    btnOption3.setBackgroundColor(Color.rgb(7, 147, 194));
                     dontKnow.setEnabled(false);
                     swipe.setVisibility(View.VISIBLE);
                     option3isClicked = true;
                 }else{
-                    btnOption3.setBackgroundColor(getResources().getColor(R.color.button_material_light));
+                    btnOption3.setBackgroundColor(Color.rgb(160,200,220));
                     option3isClicked = false;
                     if(!option1isClicked && !option2isClicked && !option3isClicked && !option4isClicked){
                         dontKnow.setEnabled(true);
@@ -89,12 +89,12 @@ public class MultipleChoiceFragment extends android.support.v4.app.Fragment {
         btnOption4.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
                 if(!option4isClicked){
-                    btnOption4.setBackgroundColor(Color.argb(255, 255, 52, 189));
+                    btnOption4.setBackgroundColor(Color.rgb(7, 147, 194));
                     dontKnow.setEnabled(false);
                     swipe.setVisibility(View.VISIBLE);
                     option4isClicked = true;
                 }else{
-                    btnOption4.setBackgroundColor(getResources().getColor(R.color.button_material_light));
+                    btnOption4.setBackgroundColor(Color.rgb(160,200,220));
                     option4isClicked = false;
                     if(!option1isClicked && !option2isClicked && !option3isClicked && !option4isClicked){
                         dontKnow.setEnabled(true);
@@ -107,7 +107,7 @@ public class MultipleChoiceFragment extends android.support.v4.app.Fragment {
         dontKnow.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
                 if(!dontKnowIsClicked){
-                    dontKnow.setBackgroundColor(Color.argb(255, 255, 52, 189));
+                    dontKnow.setBackgroundColor(Color.rgb(7, 147, 194));
                     swipe.setVisibility(View.VISIBLE);
                     btnOption1.setEnabled(false);
                     btnOption2.setEnabled(false);
@@ -115,7 +115,7 @@ public class MultipleChoiceFragment extends android.support.v4.app.Fragment {
                     btnOption4.setEnabled(false);
                     dontKnowIsClicked = true;
                 }else{
-                    dontKnow.setBackgroundColor(getResources().getColor(R.color.button_material_light));
+                    dontKnow.setBackgroundColor(Color.rgb(160,200,220));
                     btnOption1.setEnabled(true);
                     btnOption2.setEnabled(true);
                     btnOption3.setEnabled(true);

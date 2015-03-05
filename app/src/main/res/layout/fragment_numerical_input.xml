@@ -116,11 +116,12 @@
         android:layout_centerHorizontal="true"
         android:visibility="invisible"/>
 
-    <Button
+    <ImageButton
         style="@style/ButtonNumberStyle"
-        android:text="@string/backspace"
-        android:id="@+id/btnBackspace"
-        android:layout_alignTop="@+id/btnFour"
-        android:layout_alignStart="@+id/btnPoint" />
+        android:id="@+id/backspace"
+        android:src="@android:drawable/ic_input_delete"
+        android:scaleType="centerCrop"
+        android:layout_alignBottom="@+id/btnFour"
+        android:layout_toEndOf="@+id/btnFour" />
 
 </RelativeLayout>

@@ -30,13 +30,13 @@ public class SingleChoiceQuestionFragment extends android.support.v4.app.Fragmen
         btnOption1.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
                 if(!option1isClicked){
-                    btnOption1.setBackgroundColor(Color.argb(255,255,52,189));
+                    btnOption1.setBackgroundColor(Color.rgb(7, 147, 194));
                     btnOption2.setEnabled(false);
                     dontKnow.setEnabled(false);
                     swipe.setVisibility(View.VISIBLE);
                     option1isClicked = true;
                 }else{
-                    btnOption1.setBackgroundColor(getResources().getColor(R.color.button_material_light));
+                    btnOption1.setBackgroundColor(Color.rgb(160,200,220));
                     btnOption2.setEnabled(true);
                     dontKnow.setEnabled(true);
                     option1isClicked = false;
@@ -48,13 +48,13 @@ public class SingleChoiceQuestionFragment extends android.support.v4.app.Fragmen
         btnOption2.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
                 if(!option2isClicked){
-                    btnOption2.setBackgroundColor(Color.argb(255,255,52,189));
+                    btnOption2.setBackgroundColor(Color.rgb(7, 147, 194));
                     btnOption1.setEnabled(false);
                     dontKnow.setEnabled(false);
                     swipe.setVisibility(View.VISIBLE);
                     option2isClicked = true;
                 }else{
-                    btnOption2.setBackgroundColor(getResources().getColor(R.color.button_material_light));
+                    btnOption2.setBackgroundColor(Color.rgb(160,200,220));
                     btnOption1.setEnabled(true);
                     dontKnow.setEnabled(true);
                     option2isClicked = false;
@@ -66,13 +66,13 @@ public class SingleChoiceQuestionFragment extends android.support.v4.app.Fragmen
         dontKnow.setOnClickListener(new View.OnClickListener(){
             public void onClick(View v){
                 if(!dontKnowIsClicked){
-                    dontKnow.setBackgroundColor(Color.argb(255,255,52,189));
+                    dontKnow.setBackgroundColor(Color.rgb(7, 147, 194));
                     btnOption1.setEnabled(false);
                     btnOption2.setEnabled(false);
                     swipe.setVisibility(View.VISIBLE);
                     dontKnowIsClicked = true;
                 }else{
-                    dontKnow.setBackgroundColor(getResources().getColor(R.color.button_material_light));
+                    dontKnow.setBackgroundColor(Color.rgb(160,200,220));
                     btnOption1.setEnabled(true);
                     btnOption2.setEnabled(true);
                     dontKnowIsClicked = false;

@@ -10,6 +10,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageButton;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 
@@ -35,7 +36,7 @@ public class NumericalInputFragment extends android.support.v4.app.Fragment {
         final Button btn8 = (Button) view.findViewById(R.id.btnEight);
         final Button btn9 = (Button) view.findViewById(R.id.btnNine);
         final Button btnPoint = (Button) view.findViewById(R.id.btnPoint);
-        final Button btnBackspace = (Button) view.findViewById(R.id.btnBackspace);
+        final ImageButton btnBackspace = (ImageButton) view.findViewById(R.id.backspace);
         final Button dontKnow = (Button) view.findViewById(R.id.btnNumericalDontKnow);
         final EditText input = (EditText) view.findViewById(R.id.input);
         final TextView swipe = (TextView) view.findViewById(R.id.numericalContinue);
@@ -146,7 +147,7 @@ public class NumericalInputFragment extends android.support.v4.app.Fragment {
             public void onClick(View v) {
 
                 if(!dontKnowIsClicked){
-                    dontKnow.setBackgroundColor(Color.argb(255,255,52,189));
+                    dontKnow.setBackgroundColor(Color.rgb(7, 147, 194));
                     btn0.setEnabled(false);
                     btn1.setEnabled(false);
                     btn2.setEnabled(false);
@@ -163,7 +164,7 @@ public class NumericalInputFragment extends android.support.v4.app.Fragment {
                     swipe.setVisibility(View.VISIBLE);
                     dontKnowIsClicked = true;
                 }else{
-                    dontKnow.setBackgroundColor(getResources().getColor(R.color.button_material_light));
+                    dontKnow.setBackgroundColor(Color.rgb(160, 200, 220));
                     btn0.setEnabled(true);
                     btn1.setEnabled(true);
                     btn2.setEnabled(true);
