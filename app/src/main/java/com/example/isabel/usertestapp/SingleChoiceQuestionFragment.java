@@ -1,5 +1,6 @@
 package com.example.isabel.usertestapp;
 
+import android.app.Fragment;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.view.LayoutInflater;
