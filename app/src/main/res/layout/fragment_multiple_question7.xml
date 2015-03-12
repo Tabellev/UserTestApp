@@ -3,16 +3,6 @@
     style="@style/FragmentStyle"
     tools:context="com.example.isabel.usertestapp.MultipleChoiceFragment">
 
-    <ProgressBar
-        android:id="@+id/progressbar7"
-        style="@android:style/Widget.ProgressBar.Horizontal"
-        android:max="10"
-        android:progress="0"
-        android:layout_width="1000dp"
-        android:layout_height="wrap_content"
-        android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true" />
-
     <TextView
         style="@style/TextFieldStyle"
         android:text="@string/multiple_choice_question7"

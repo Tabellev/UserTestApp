@@ -10,4 +10,21 @@
         android:layout_width="fill_parent"
         android:layout_height="fill_parent"
         />
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal">
+
+        <ProgressBar
+        android:id="@+id/progress"
+        style="@android:style/Widget.ProgressBar.Horizontal"
+        android:max="10"
+        android:progress="0"
+        android:visibility="gone"
+        android:layout_width="match_parent"
+        android:layout_height="10dp"
+        android:indeterminate="false" />
+    </FrameLayout>
+
 </FrameLayout>

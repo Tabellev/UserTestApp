@@ -17,7 +17,6 @@ public class SingleQuestion4Fragment extends android.support.v4.app.Fragment {
     private Boolean option1isClicked = false;
     private Boolean option2isClicked = false;
     private Boolean dontKnowIsClicked = false;
-    private ProgressBar mProgressBar;
     private Button btnOption1;
     private Button btnOption2;
     private Button dontKnow;
@@ -33,9 +32,7 @@ public class SingleQuestion4Fragment extends android.support.v4.app.Fragment {
         btnOption2 = (Button) view.findViewById(R.id.btnAnswer2SingleQuestion4);
         dontKnow = (Button) view.findViewById(R.id.DontKnowSingle4);
         swipe = (TextView) view.findViewById(R.id.singleQuestion4Continue);
-        mProgressBar=(ProgressBar)view.findViewById(R.id.progressbar1);
 
-        startCountdownTimer();
 
         btnOption1.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
@@ -117,7 +114,7 @@ public class SingleQuestion4Fragment extends android.support.v4.app.Fragment {
         return f;
     }
 
-    private void startCountdownTimer() {
+   /* private void startCountdownTimer() {
 
         final int totalMsecs = 10 * 1000;
         mProgressBar.setProgress(totalMsecs);
@@ -143,6 +140,6 @@ public class SingleQuestion4Fragment extends android.support.v4.app.Fragment {
             }
         }.start();
 
-    }
+    }*/
 
     }

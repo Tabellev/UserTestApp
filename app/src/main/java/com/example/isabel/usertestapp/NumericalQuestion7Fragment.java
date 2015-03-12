@@ -36,7 +36,6 @@ public class NumericalQuestion7Fragment extends android.support.v4.app.Fragment 
     private Button dontKnow;
     private EditText input;
     private TextView swipe;
-    private ProgressBar mProgressBar;
 
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
@@ -61,9 +60,7 @@ public class NumericalQuestion7Fragment extends android.support.v4.app.Fragment 
         dontKnow = (Button) view.findViewById(R.id.btnNumerical7DontKnow);
         input = (EditText) view.findViewById(R.id.inputNumerical7);
         swipe = (TextView) view.findViewById(R.id.numerical7Continue);
-        mProgressBar=(ProgressBar)view.findViewById(R.id.progressbar10);
 
-        startCountdownTimer();
 
         input.setInputType(InputType.TYPE_NULL);
 
@@ -271,7 +268,7 @@ public class NumericalQuestion7Fragment extends android.support.v4.app.Fragment 
         }
     }
 
-    private void startCountdownTimer() {
+    /*private void startCountdownTimer() {
 
         final int totalMsecs = 10 * 1000;
         mProgressBar.setProgress(totalMsecs);
@@ -319,5 +316,5 @@ public class NumericalQuestion7Fragment extends android.support.v4.app.Fragment 
             }
         }.start();
 
-    }
+    }*/
 }

@@ -36,7 +36,7 @@ public class NumericalQuestion5Fragment extends android.support.v4.app.Fragment 
     private Button dontKnow;
     private EditText input;
     private TextView swipe;
-    private ProgressBar mProgressBar;
+
 
 
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -60,11 +60,8 @@ public class NumericalQuestion5Fragment extends android.support.v4.app.Fragment 
         btnBackspace = (ImageButton) view.findViewById(R.id.backspaceNumerical5);
         btnReset = (ImageButton) view.findViewById(R.id.btnReset5);
         dontKnow = (Button) view.findViewById(R.id.btnNumerical5DontKnow);
-        mProgressBar=(ProgressBar)view.findViewById(R.id.progressbar8);
         input = (EditText) view.findViewById(R.id.inputNumerical5);
         swipe = (TextView) view.findViewById(R.id.numerical5Continue);
-
-        startCountdownTimer();
 
         input.setInputType(InputType.TYPE_NULL);
 
@@ -272,7 +269,7 @@ public class NumericalQuestion5Fragment extends android.support.v4.app.Fragment 
         }
     }
 
-    private void startCountdownTimer() {
+   /* private void startCountdownTimer() {
 
         final int totalMsecs = 10 * 1000;
         mProgressBar.setProgress(totalMsecs);
@@ -320,5 +317,5 @@ public class NumericalQuestion5Fragment extends android.support.v4.app.Fragment 
             }
         }.start();
 
-    }
+    }*/
 }

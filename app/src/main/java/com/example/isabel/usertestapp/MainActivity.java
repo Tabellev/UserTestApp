@@ -1,6 +1,8 @@
 package com.example.isabel.usertestapp;
 
+import android.graphics.Color;
 import android.os.Bundle;
+import android.os.CountDownTimer;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentStatePagerAdapter;
@@ -8,6 +10,7 @@ import android.support.v4.view.ViewPager;
 import android.util.Log;
 import android.view.MotionEvent;
 import android.view.View;
+import android.widget.ProgressBar;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 
@@ -18,8 +21,10 @@ import java.util.Vector;
 public class MainActivity extends android.support.v4.app.FragmentActivity {
 
     private PagerAdapter mPagerAdapter;
+    Fragment f;
     private int oldX;
     private int deltaX = 0;
+    ProgressBar mProgressBar;
     private long startTime;
     private long stopTime;
     private long totalTime;
@@ -35,7 +40,7 @@ public class MainActivity extends android.support.v4.app.FragmentActivity {
 
     private void initialisePaging() {
 
-        List<Fragment> fragments = new ArrayList<>();
+        final List<Fragment> fragments = new ArrayList<>();
         fragments.add(Fragment.instantiate(this, StartScreenFragment.class.getName()));
         fragments.add(Fragment.instantiate(this, SingleChoiceQuestionFragment.class.getName()));
         fragments.add(Fragment.instantiate(this, NumericalQuestion1Fragment.class.getName()));
@@ -60,14 +65,20 @@ public class MainActivity extends android.support.v4.app.FragmentActivity {
         fragments.add(Fragment.instantiate(this, NumericalQuestion7Fragment.class.getName()));
         fragments.add(Fragment.instantiate(this, MultipleQuestion7Fragment.class.getName()));
         fragments.add(Fragment.instantiate(this, SessionFinishedFragment.class.getName()));
-        //fragments.add(Fragment.instantiate(this, NumericalInputFragment.class.getName()));
-        //fragments.add(Fragment.instantiate(this, NumericalResetFragment.class.getName()));
+
+        //Lagt til for testen.
+        fragments.add(Fragment.instantiate(this, SwipeToStartNewRunFragment.class.getName()));
+        fragments.add(Fragment.instantiate(this, SingleChoiceQuestionFragment.class.getName()));
+        fragments.add(Fragment.instantiate(this, MultipleChoiceFragment.class.getName()));
+        fragments.add(Fragment.instantiate(this, NumericalInputFragment.class.getName()));
+        fragments.add(Fragment.instantiate(this, NumericalResetFragment.class.getName()));
+        fragments.add(Fragment.instantiate(this, SessionFinishedFragment.class.getName()));
        /* time = (TextView)findViewById(R.id.time);
         Log.e("NOte: ","MainActivity");*/
-
+        mProgressBar = (ProgressBar)findViewById(R.id.progress);
         this.mPagerAdapter  = new PagerAdapter(super.getSupportFragmentManager(), fragments);
         //
-        ViewPager pager = (ViewPager)super.findViewById(R.id.viewpager);
+        final ViewPager pager = (ViewPager)super.findViewById(R.id.viewpager);
         pager.setAdapter(this.mPagerAdapter);
         pager.setOnTouchListener(new View.OnTouchListener()
         {
@@ -98,6 +109,14 @@ public class MainActivity extends android.support.v4.app.FragmentActivity {
 
             @Override
             public void onPageSelected(int position) {
+                if(position > 12 && position < 23){
+                    mProgressBar.setVisibility(View.VISIBLE);
+                    startCountdownTimer();
+                }
+
+                if(position > 22){
+                    mProgressBar.setVisibility(View.GONE);
+                }
 
             }
 
@@ -143,9 +162,25 @@ public class MainActivity extends android.support.v4.app.FragmentActivity {
     @Override
     public void onBackPressed(){}
 
-    public String getUsedTime(long startTime, long stopTime){
+    public void startCountdownTimer() {
 
-        return String.valueOf((stopTime-startTime));
+        final int totalMsecs = 10 * 1000;
+        mProgressBar.setProgress(totalMsecs);
+        c.start();
     }
+
+    CountDownTimer c = new CountDownTimer(10000, 1000) {
+
+        public void onTick(long millisUntilFinished) {
+
+            int secondsRemaining = (int) millisUntilFinished / 1000;
+            mProgressBar.setProgress(secondsRemaining);
+        }
+
+        public void onFinish() {
+            mProgressBar.setProgress(0);
+        }
+
+    };
 
 }

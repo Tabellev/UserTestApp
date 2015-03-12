@@ -26,7 +26,6 @@ public class MultipleQuestion4Fragment extends android.support.v4.app.Fragment {
     private Button btnOption4;
     private Button dontKnow;
     private TextView swipe;
-    private  ProgressBar mProgressBar;
 
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
@@ -40,9 +39,8 @@ public class MultipleQuestion4Fragment extends android.support.v4.app.Fragment {
         btnOption4 = (Button) view.findViewById(R.id.btnMultiple4AnsFour);
         dontKnow = (Button) view.findViewById(R.id.multiple4DontKnow);
         swipe = (TextView) view.findViewById(R.id.multipleChoice4Continue);
-        mProgressBar=(ProgressBar)view.findViewById(R.id.progressbar4);
 
-        startCountdownTimer();
+        //startCountdownTimer();
 
         btnOption1.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
@@ -169,7 +167,7 @@ public class MultipleQuestion4Fragment extends android.support.v4.app.Fragment {
         return f;
     }
 
-    private void startCountdownTimer() {
+    /*public void startCountdownTimer() {
 
         final int totalMsecs = 10 * 1000;
         mProgressBar.setProgress(totalMsecs);
@@ -198,6 +196,5 @@ public class MultipleQuestion4Fragment extends android.support.v4.app.Fragment {
                 swipe.setVisibility(View.VISIBLE);
             }
         }.start();
-
-    }
+    }*/
 }
