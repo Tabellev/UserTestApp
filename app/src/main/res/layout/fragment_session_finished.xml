@@ -1,0 +1,13 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+style="@style/FragmentStyle"
+xmlns:tools="http://schemas.android.com/tools" tools:context="com.example.isabel.guitestapp.StartScreen"
+    >
+
+<TextView
+    style="@style/TextFieldStyle"
+    android:text="@string/session_finished"
+    android:id="@+id/sessionFinished"
+    android:layout_centerVertical="true"
+    android:layout_centerHorizontal="true" />
+
+</RelativeLayout>

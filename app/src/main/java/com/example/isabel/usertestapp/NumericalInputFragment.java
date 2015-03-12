@@ -149,34 +149,58 @@ public class NumericalInputFragment extends android.support.v4.app.Fragment {
                 if(!dontKnowIsClicked){
                     dontKnow.setBackgroundColor(Color.rgb(7, 147, 194));
                     btn0.setEnabled(false);
+                    btn0.setBackgroundColor(Color.argb(50,160, 200, 220));
                     btn1.setEnabled(false);
+                    btn1.setBackgroundColor(Color.argb(50,160, 200, 220));
                     btn2.setEnabled(false);
+                    btn2.setBackgroundColor(Color.argb(50,160, 200, 220));
                     btn3.setEnabled(false);
+                    btn3.setBackgroundColor(Color.argb(50,160, 200, 220));
                     btn4.setEnabled(false);
+                    btn4.setBackgroundColor(Color.argb(50,160, 200, 220));
                     btn5.setEnabled(false);
+                    btn5.setBackgroundColor(Color.argb(50,160, 200, 220));
                     btn6.setEnabled(false);
+                    btn6.setBackgroundColor(Color.argb(50,160, 200, 220));
                     btn7.setEnabled(false);
+                    btn7.setBackgroundColor(Color.argb(50,160, 200, 220));
                     btn8.setEnabled(false);
+                    btn8.setBackgroundColor(Color.argb(50,160, 200, 220));
                     btn9.setEnabled(false);
+                    btn9.setBackgroundColor(Color.argb(50,160, 200, 220));
                     btnPoint.setEnabled(false);
+                    btnPoint.setBackgroundColor(Color.argb(50,160, 200, 220));
                     btnBackspace.setEnabled(false);
+                    btnBackspace.setBackgroundColor(Color.argb(50,160, 200, 220));
                     input.setText("");
                     swipe.setVisibility(View.VISIBLE);
                     dontKnowIsClicked = true;
                 }else{
                     dontKnow.setBackgroundColor(Color.rgb(160, 200, 220));
                     btn0.setEnabled(true);
+                    btn0.setBackgroundColor(Color.rgb(160, 200, 220));
                     btn1.setEnabled(true);
+                    btn1.setBackgroundColor(Color.rgb(160, 200, 220));
                     btn2.setEnabled(true);
+                    btn2.setBackgroundColor(Color.rgb(160, 200, 220));
                     btn3.setEnabled(true);
+                    btn3.setBackgroundColor(Color.rgb(160, 200, 220));
                     btn4.setEnabled(true);
+                    btn4.setBackgroundColor(Color.rgb(160, 200, 220));
                     btn5.setEnabled(true);
+                    btn5.setBackgroundColor(Color.rgb(160, 200, 220));
                     btn6.setEnabled(true);
+                    btn6.setBackgroundColor(Color.rgb(160, 200, 220));
                     btn7.setEnabled(true);
+                    btn7.setBackgroundColor(Color.rgb(160, 200, 220));
                     btn8.setEnabled(true);
+                    btn8.setBackgroundColor(Color.rgb(160, 200, 220));
                     btn9.setEnabled(true);
+                    btn9.setBackgroundColor(Color.rgb(160, 200, 220));
                     btnPoint.setEnabled(true);
+                    btnPoint.setBackgroundColor(Color.rgb(160, 200, 220));
                     btnBackspace.setEnabled(true);
+                    btnBackspace.setBackgroundColor(Color.rgb(160, 200, 220));
                     dontKnowIsClicked = false;
                 }
 

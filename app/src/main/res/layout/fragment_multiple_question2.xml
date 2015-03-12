@@ -6,51 +6,51 @@
 
     <TextView
         style="@style/TextFieldStyle"
-        android:text="@string/mutiple_choice_question1"
-        android:id="@+id/multipleAnswerQuestion"
+        android:text="@string/multiple_choice_qiestion2"
+        android:id="@+id/multipleAnswerQuestion2"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="106dp" />
 
     <Button
         style="@style/ButtonAnswerStyle"
-        android:text="@string/mcDonalds"
-        android:id="@+id/btnMulAnsOne"
-        android:layout_alignTop="@+id/btnMulAnsTwo"
-        android:layout_toStartOf="@+id/multipleChoiceContinue" />
+        android:text="@string/gris"
+        android:id="@+id/btnMultiple2AnsOne"
+        android:layout_alignTop="@+id/btnMultiple2AnsTwo"
+        android:layout_toStartOf="@+id/btnMultiple2AnsTwo" />
 
     <Button
         style="@style/ButtonAnswerStyle"
-        android:text="@string/kfc"
-        android:id="@+id/btnMulAnsTwo"
-        android:layout_alignTop="@+id/btnMulAnsThree"
-        android:layout_alignStart="@+id/multipleChoiceContinue" />
+        android:text="@string/hund"
+        android:id="@+id/btnMultiple2AnsTwo"
+        android:layout_alignTop="@+id/btnMultiple2AnsThree"
+        android:layout_alignStart="@+id/multipleChoice2Continue" />
 
     <Button
         style="@style/ButtonAnswerStyle"
-        android:text="@string/starBucks"
-        android:id="@+id/btnMulAnsThree"
+        android:text="@string/sau"
+        android:id="@+id/btnMultiple2AnsThree"
+        android:layout_alignTop="@+id/btnMultiple2AnsFour"
+        android:layout_toEndOf="@+id/btnMultiple2AnsTwo" />
+
+    <Button
+        style="@style/ButtonAnswerStyle"
+        android:text="@string/hest"
+        android:id="@+id/btnMultiple2AnsFour"
         android:layout_centerVertical="true"
-        android:layout_toEndOf="@+id/btnMulAnsTwo" />
-
-    <Button
-        style="@style/ButtonAnswerStyle"
-        android:text="@string/burgerKing"
-        android:id="@+id/btnMulAnsFour"
-        android:layout_alignTop="@+id/btnMulAnsThree"
-        android:layout_toEndOf="@+id/btnMulAnsThree" />
+        android:layout_toEndOf="@+id/btnMultiple2AnsThree" />
 
     <Button
         style="@style/ButtonDontKnowStyle"
         android:text="@string/answer_dont_know"
-        android:id="@+id/multipleDontKnow"
+        android:id="@+id/multiple2DontKnow"
         android:layout_alignParentBottom="true"
         android:layout_alignParentEnd="true" />
 
     <TextView
         style="@style/TextFieldSwipeStyle"
         android:text="@string/swipe_to_continue"
-        android:id="@+id/multipleChoiceContinue"
+        android:id="@+id/multipleChoice2Continue"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
         android:visibility="invisible"/>

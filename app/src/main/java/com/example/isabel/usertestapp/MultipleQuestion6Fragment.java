@@ -5,32 +5,44 @@ import android.graphics.Color;
 import android.net.Uri;
 import android.os.Bundle;
 import android.app.Fragment;
+import android.os.CountDownTimer;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.ProgressBar;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 
-public class MultipleChoiceFragment extends android.support.v4.app.Fragment {
+public class MultipleQuestion6Fragment extends android.support.v4.app.Fragment {
     private Boolean option1isClicked = false;
     private Boolean option2isClicked = false;
     private Boolean option3isClicked = false;
     private Boolean option4isClicked = false;
     private Boolean dontKnowIsClicked = false;
+    private Button btnOption1;
+    private Button btnOption2;
+    private Button btnOption3;
+    private Button btnOption4;
+    private Button dontKnow;
+    private TextView swipe;
+    private ProgressBar mProgressBar;
 
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         if (container == null) {
             return null;
         }
-        View view = (RelativeLayout)inflater.inflate(R.layout.fragment_multiple_choice, container, false);
-        final Button btnOption1 = (Button)view.findViewById(R.id.btnMulAnsOne);
-        final Button btnOption2 = (Button) view.findViewById(R.id.btnMulAnsTwo);
-        final Button btnOption3 = (Button) view.findViewById(R.id.btnMulAnsThree);
-        final Button btnOption4 = (Button) view.findViewById(R.id.btnMulAnsFour);
-        final Button dontKnow = (Button) view.findViewById(R.id.multipleDontKnow);
-        final TextView swipe = (TextView) view.findViewById(R.id.multipleChoiceContinue);
+        View view = (RelativeLayout)inflater.inflate(R.layout.fragment_multiple_question6, container, false);
+        btnOption1 = (Button)view.findViewById(R.id.btnMultiple6AnsOne);
+        btnOption2 = (Button) view.findViewById(R.id.btnMultiple6AnsTwo);
+        btnOption3 = (Button) view.findViewById(R.id.btnMultiple6AnsThree);
+        btnOption4 = (Button) view.findViewById(R.id.btnMultiple6AnsFour);
+        dontKnow = (Button) view.findViewById(R.id.multiple6DontKnow);
+        swipe = (TextView) view.findViewById(R.id.multipleChoice6Continue);
+        mProgressBar=(ProgressBar)view.findViewById(R.id.progressbar6);
+
+        startCountdownTimer();
 
         btnOption1.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
@@ -147,13 +159,45 @@ public class MultipleChoiceFragment extends android.support.v4.app.Fragment {
         return view;
     }
 
-    public MultipleChoiceFragment(){}
+    public MultipleQuestion6Fragment(){}
 
-    public static MultipleChoiceFragment newInstance(int index) {
-        MultipleChoiceFragment f = new MultipleChoiceFragment();
+    public static MultipleQuestion6Fragment newInstance(int index) {
+        MultipleQuestion6Fragment f = new MultipleQuestion6Fragment();
         Bundle args = new Bundle();
         args.putInt("index", index);
         f.setArguments(args);
         return f;
+    }
+
+    private void startCountdownTimer() {
+
+        final int totalMsecs = 10 * 1000;
+        mProgressBar.setProgress(totalMsecs);
+
+
+        new CountDownTimer(10000, 1000) {
+
+            public void onTick(long millisUntilFinished) {
+
+                int secondsRemaining = (int) millisUntilFinished / 1000;
+                mProgressBar.setProgress(secondsRemaining);
+            }
+
+            public void onFinish() {
+                mProgressBar.setProgress(0);
+                btnOption1.setEnabled(false);
+                btnOption1.setBackgroundColor(Color.argb(50,160,200,220));
+                btnOption2.setEnabled(false);
+                btnOption2.setBackgroundColor(Color.argb(50,160,200,220));
+                btnOption3.setEnabled(false);
+                btnOption3.setBackgroundColor(Color.argb(50,160,200,220));
+                btnOption4.setEnabled(false);
+                btnOption4.setBackgroundColor(Color.argb(50,160,200,220));
+                dontKnow.setEnabled(false);
+                dontKnow.setBackgroundColor(Color.argb(50,160,200,220));
+                swipe.setVisibility(View.VISIBLE);
+            }
+        }.start();
+
     }
 }

@@ -1,32 +1,41 @@
 package com.example.isabel.usertestapp;
 
-import android.app.Fragment;
 import android.graphics.Color;
 import android.os.Bundle;
+import android.os.CountDownTimer;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.ProgressBar;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 
-public class SingleChoiceQuestionFragment extends android.support.v4.app.Fragment {
+public class SingleQuestion5Fragment extends android.support.v4.app.Fragment {
 
     private Boolean option1isClicked = false;
     private Boolean option2isClicked = false;
     private Boolean dontKnowIsClicked = false;
+    private ProgressBar mProgressBar;
+    private Button btnOption1;
+    private Button btnOption2;
+    private Button dontKnow;
+    private TextView swipe;
 
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         if (container == null) {
             return null;
         }
-         View view = (RelativeLayout)inflater.inflate(R.layout.fragment_single_choice_question, container, false);
-        final Button btnOption1 = (Button)view.findViewById(R.id.btnAnswerOption1);
-        final Button btnOption2 = (Button) view.findViewById(R.id.btnAnswerOption2);
-        final Button dontKnow = (Button) view.findViewById(R.id.singleDontKnow);
-        final TextView swipe = (TextView) view.findViewById(R.id.singleChoiceContinue);
+        View view = (RelativeLayout)inflater.inflate(R.layout.fragment_single_question5, container, false);
+        btnOption1 = (Button)view.findViewById(R.id.btnAnswer1SingleQuestion5);
+        btnOption2 = (Button) view.findViewById(R.id.btnAnswer2SingleQuestion5);
+        dontKnow = (Button) view.findViewById(R.id.DontKnowSingle5);
+        swipe = (TextView) view.findViewById(R.id.singleQuestion5Continue);
+        mProgressBar=(ProgressBar)view.findViewById(R.id.progressbar2);
+        startCountdownTimer();
+
         btnOption1.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
                 if(!option1isClicked){
@@ -95,14 +104,42 @@ public class SingleChoiceQuestionFragment extends android.support.v4.app.Fragmen
         return  view;
     }
 
-    public SingleChoiceQuestionFragment(){}
+    public SingleQuestion5Fragment(){}
 
-    public static SingleChoiceQuestionFragment newInstance(int index) {
-        SingleChoiceQuestionFragment f = new SingleChoiceQuestionFragment();
+    public static SingleQuestion5Fragment newInstance(int index) {
+        SingleQuestion5Fragment f = new SingleQuestion5Fragment();
         Bundle args = new Bundle();
         args.putInt("index", index);
         f.setArguments(args);
         return f;
+    }
+
+    private void startCountdownTimer() {
+
+        final int totalMsecs = 10 * 1000;
+        mProgressBar.setProgress(totalMsecs);
+
+
+        new CountDownTimer(10000, 1000) {
+
+            public void onTick(long millisUntilFinished) {
+
+                int secondsRemaining = (int) millisUntilFinished / 1000;
+                mProgressBar.setProgress(secondsRemaining);
+            }
+
+            public void onFinish() {
+                mProgressBar.setProgress(0);
+                btnOption1.setEnabled(false);
+                btnOption1.setBackgroundColor(Color.argb(50,160,200,220));
+                btnOption2.setEnabled(false);
+                btnOption2.setBackgroundColor(Color.argb(50,160,200,220));
+                dontKnow.setEnabled(false);
+                dontKnow.setBackgroundColor(Color.argb(50,160,200,220));
+                swipe.setVisibility(View.VISIBLE);
+            }
+        }.start();
+
     }
 
 

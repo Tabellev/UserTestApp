@@ -12,7 +12,7 @@ import android.widget.Button;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 
-public class MultipleChoiceFragment extends android.support.v4.app.Fragment {
+public class MultipleQuestion2Fragment extends android.support.v4.app.Fragment {
     private Boolean option1isClicked = false;
     private Boolean option2isClicked = false;
     private Boolean option3isClicked = false;
@@ -24,13 +24,13 @@ public class MultipleChoiceFragment extends android.support.v4.app.Fragment {
         if (container == null) {
             return null;
         }
-        View view = (RelativeLayout)inflater.inflate(R.layout.fragment_multiple_choice, container, false);
-        final Button btnOption1 = (Button)view.findViewById(R.id.btnMulAnsOne);
-        final Button btnOption2 = (Button) view.findViewById(R.id.btnMulAnsTwo);
-        final Button btnOption3 = (Button) view.findViewById(R.id.btnMulAnsThree);
-        final Button btnOption4 = (Button) view.findViewById(R.id.btnMulAnsFour);
-        final Button dontKnow = (Button) view.findViewById(R.id.multipleDontKnow);
-        final TextView swipe = (TextView) view.findViewById(R.id.multipleChoiceContinue);
+        View view = (RelativeLayout)inflater.inflate(R.layout.fragment_multiple_question2, container, false);
+        final Button btnOption1 = (Button)view.findViewById(R.id.btnMultiple2AnsOne);
+        final Button btnOption2 = (Button) view.findViewById(R.id.btnMultiple2AnsTwo);
+        final Button btnOption3 = (Button) view.findViewById(R.id.btnMultiple2AnsThree);
+        final Button btnOption4 = (Button) view.findViewById(R.id.btnMultiple2AnsFour);
+        final Button dontKnow = (Button) view.findViewById(R.id.multiple2DontKnow);
+        final TextView swipe = (TextView) view.findViewById(R.id.multipleChoice2Continue);
 
         btnOption1.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
@@ -147,10 +147,10 @@ public class MultipleChoiceFragment extends android.support.v4.app.Fragment {
         return view;
     }
 
-    public MultipleChoiceFragment(){}
+    public MultipleQuestion2Fragment(){}
 
-    public static MultipleChoiceFragment newInstance(int index) {
-        MultipleChoiceFragment f = new MultipleChoiceFragment();
+    public static MultipleQuestion2Fragment newInstance(int index) {
+        MultipleQuestion2Fragment f = new MultipleQuestion2Fragment();
         Bundle args = new Bundle();
         args.putInt("index", index);
         f.setArguments(args);

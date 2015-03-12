@@ -1,0 +1,135 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    style="@style/FragmentStyle"
+    tools:context="com.example.isabel.usertestapp.NumericalInputFragment">
+
+
+    <TextView
+        style="@style/TextFieldStyle"
+        android:text="@string/numerical_question2"
+        android:id="@+id/numericalQuestion2"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="77dp" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:id="@+id/inputNumerical2"
+        android:layout_marginTop="59dp"
+        android:layout_below="@+id/numericalQuestion2"
+        android:layout_centerHorizontal="true"
+        android:textAlignment="center"
+        android:textSize="30sp" />
+
+    <ImageButton
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:id="@+id/btnReset2"
+        android:background="@android:drawable/ic_notification_clear_all"
+        android:layout_alignTop="@+id/inputNumerical2"
+        android:layout_alignEnd="@+id/inputNumerical2" />
+
+    <Button
+        style="@style/ButtonNumberStyle"
+        android:text="@string/zero"
+        android:id="@+id/btnZeroNumerical2"
+        android:layout_alignTop="@+id/btnOneNumerical2"
+        android:layout_toStartOf="@+id/btnOneNumerical2" />
+
+    <Button
+        style="@style/ButtonNumberStyle"
+        android:text="@string/one"
+        android:id="@+id/btnOneNumerical2"
+        android:layout_above="@+id/btnSixNumerical2"
+        android:layout_alignStart="@+id/numericalQuestion2" />
+
+    <Button
+        style="@style/ButtonNumberStyle"
+        android:text="@string/two"
+        android:id="@+id/btnTwoNumerical2"
+        android:layout_alignTop="@+id/btnOneNumerical2"
+        android:layout_toEndOf="@+id/btnOneNumerical2" />
+
+    <Button
+        style="@style/ButtonNumberStyle"
+        android:text="@string/three"
+        android:id="@+id/btnThreeNumerical2"
+        android:layout_alignBottom="@+id/btnTwoNumerical2"
+        android:layout_toEndOf="@+id/btnTwoNumerical2" />
+
+
+    <Button
+        style="@style/ButtonNumberStyle"
+        android:text="@string/four"
+        android:id="@+id/btnFourNumerical2"
+        android:layout_alignTop="@+id/btnThreeNumerical2"
+        android:layout_alignStart="@+id/btnNineNumerical2" />
+
+    <Button
+        style="@style/ButtonNumberStyleBottom"
+        android:text="@string/five"
+        android:id="@+id/btnFiveNumerical2"
+        android:layout_above="@+id/btnNumerical2DontKnow"
+        android:layout_alignStart="@+id/btnZeroNumerical2" />
+
+    <Button
+        style="@style/ButtonNumberStyleBottom"
+        android:text="@string/six"
+        android:id="@+id/btnSixNumerical2"
+        android:layout_alignBottom="@+id/btnFiveNumerical2"
+        android:layout_alignStart="@+id/btnOneNumerical2" />
+
+    <Button
+        style="@style/ButtonNumberStyleBottom"
+        android:text="@string/seven"
+        android:id="@+id/btnSevenNumerical2"
+        android:layout_alignBottom="@+id/btnSixNumerical2"
+        android:layout_alignStart="@+id/btnTwoNumerical2" />
+
+    <Button
+        style="@style/ButtonNumberStyleBottom"
+        android:text="@string/eight"
+        android:id="@+id/btnEightNumerical2"
+        android:layout_alignBottom="@+id/btnSevenNumerical2"
+        android:layout_alignStart="@+id/btnThreeNumerical2" />
+
+    <Button
+        style="@style/ButtonNumberStyleBottom"
+        android:text="@string/nine"
+        android:id="@+id/btnNineNumerical2"
+        android:layout_alignBottom="@+id/btnEightNumerical2"
+        android:layout_toEndOf="@+id/btnEightNumerical2" />
+
+    <Button
+        style="@style/ButtonNumberStyleBottom"
+        android:text="@string/point"
+        android:id="@+id/btnPointNumerical2"
+        android:layout_alignBottom="@+id/btnNineNumerical2"
+        android:layout_toEndOf="@+id/btnNineNumerical2" />
+
+    <Button
+        style="@style/ButtonDontKnowStyle"
+        android:text="@string/answer_dont_know"
+        android:id="@+id/btnNumerical2DontKnow"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true" />
+
+    <TextView
+        style="@style/TextFieldSwipeStyle"
+        android:text="@string/swipe_to_continue"
+        android:id="@+id/numerical2Continue"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:visibility="invisible"/>
+
+    <ImageButton
+        style="@style/ButtonNumberStyle"
+        android:id="@+id/backspaceNumerical2"
+        android:src="@android:drawable/ic_input_delete"
+        android:scaleType="centerCrop"
+        android:layout_alignBottom="@+id/btnFourNumerical2"
+        android:layout_toEndOf="@+id/btnFourNumerical2" />
+
+</RelativeLayout>

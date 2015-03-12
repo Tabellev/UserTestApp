@@ -1,0 +1,47 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    style="@style/FragmentStyle"
+    tools:context="com.example.isabel.guitestapp.SingleChoiceQuestion">
+
+
+    <TextView
+        style="@style/TextFieldStyle"
+        android:text="@string/single_choice_question2"
+        android:id="@+id/singleQuestion2"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="77dp" />
+
+    <Button
+        style="@style/ButtonAnswerStyle"
+        android:text="@string/svømming"
+        android:id="@+id/btnAnswer1SingleQuestion2"
+        android:onClick="btnAnswerOption1Clicked"
+        android:layout_centerVertical="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="317dp" />
+
+    <Button
+        style="@style/ButtonAnswerStyle"
+        android:text="@string/jogging"
+        android:id="@+id/btnAnswer2SingleQuestion2"
+        android:onClick="btnAnswerOption2Clicked"
+        android:layout_marginStart="125dp"
+        android:layout_alignTop="@+id/btnAnswer1SingleQuestion2"
+        android:layout_toEndOf="@+id/btnAnswer1SingleQuestion2" />
+
+    <Button
+        style="@style/ButtonDontKnowStyle"
+        android:text="@string/answer_dont_know"
+        android:id="@+id/DontKnowSingle2"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true" />
+
+    <TextView
+        style="@style/TextFieldSwipeStyle"
+        android:text="@string/swipe_to_continue"
+        android:id="@+id/singleQuestion2Continue"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:visibility="invisible"/>
+</RelativeLayout>

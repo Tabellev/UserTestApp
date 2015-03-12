@@ -1,6 +1,5 @@
 package com.example.isabel.usertestapp;
 
-import android.app.Fragment;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -11,7 +10,7 @@ import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 
-public class SingleChoiceQuestionFragment extends android.support.v4.app.Fragment {
+public class SingleQuestion2Fragment extends android.support.v4.app.Fragment {
 
     private Boolean option1isClicked = false;
     private Boolean option2isClicked = false;
@@ -22,11 +21,11 @@ public class SingleChoiceQuestionFragment extends android.support.v4.app.Fragmen
         if (container == null) {
             return null;
         }
-         View view = (RelativeLayout)inflater.inflate(R.layout.fragment_single_choice_question, container, false);
-        final Button btnOption1 = (Button)view.findViewById(R.id.btnAnswerOption1);
-        final Button btnOption2 = (Button) view.findViewById(R.id.btnAnswerOption2);
-        final Button dontKnow = (Button) view.findViewById(R.id.singleDontKnow);
-        final TextView swipe = (TextView) view.findViewById(R.id.singleChoiceContinue);
+        View view = (RelativeLayout)inflater.inflate(R.layout.fragment_singel_question2, container, false);
+        final Button btnOption1 = (Button)view.findViewById(R.id.btnAnswer1SingleQuestion2);
+        final Button btnOption2 = (Button) view.findViewById(R.id.btnAnswer2SingleQuestion2);
+        final Button dontKnow = (Button) view.findViewById(R.id.DontKnowSingle2);
+        final TextView swipe = (TextView) view.findViewById(R.id.singleQuestion2Continue);
         btnOption1.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
                 if(!option1isClicked){
@@ -95,10 +94,10 @@ public class SingleChoiceQuestionFragment extends android.support.v4.app.Fragmen
         return  view;
     }
 
-    public SingleChoiceQuestionFragment(){}
+    public SingleQuestion2Fragment(){}
 
-    public static SingleChoiceQuestionFragment newInstance(int index) {
-        SingleChoiceQuestionFragment f = new SingleChoiceQuestionFragment();
+    public static SingleQuestion2Fragment newInstance(int index) {
+        SingleQuestion2Fragment f = new SingleQuestion2Fragment();
         Bundle args = new Bundle();
         args.putInt("index", index);
         f.setArguments(args);

@@ -1,21 +1,23 @@
 package com.example.isabel.usertestapp;
 
 import android.app.Activity;
+import android.content.Context;
 import android.graphics.Color;
 import android.net.Uri;
 import android.os.Bundle;
 import android.app.Fragment;
+import android.text.InputType;
 import android.view.LayoutInflater;
-import android.view.MotionEvent;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.inputmethod.InputMethodManager;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageButton;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 
-public class NumericalResetFragment extends android.support.v4.app.Fragment {
+public class NumericalQuestion1Fragment extends android.support.v4.app.Fragment {
 
     private Boolean dontKnowIsClicked = false;
 
@@ -25,22 +27,25 @@ public class NumericalResetFragment extends android.support.v4.app.Fragment {
             return null;
         }
 
-        View view = (RelativeLayout)inflater.inflate(R.layout.fragment_numerical_reset, container, false);
-        final Button btn0 = (Button)view.findViewById(R.id.btnResetZero);
-        final Button btn1 = (Button) view.findViewById(R.id.btnResetOne);
-        final Button btn2 = (Button) view.findViewById(R.id.btnResetTwo);
-        final Button btn3 = (Button) view.findViewById(R.id.btnResetThree);
-        final Button btn4 = (Button) view.findViewById(R.id.btnResetFour);
-        final Button btn5 = (Button) view.findViewById(R.id.btnResetFive);
-        final Button btn6 = (Button) view.findViewById(R.id.btnResetSix);
-        final Button btn7 = (Button) view.findViewById(R.id.btnResetSeven);
-        final Button btn8 = (Button) view.findViewById(R.id.btnResetEight);
-        final Button btn9 = (Button) view.findViewById(R.id.btnResetNine);
-        final Button btnPoint = (Button) view.findViewById(R.id.btnResetPoint);
-        final ImageButton btnReset = (ImageButton) view.findViewById(R.id.btnReset);
-        final Button dontKnow = (Button) view.findViewById(R.id.btnResetDontKnow);
-        final EditText input = (EditText) view.findViewById(R.id.resetInputText);
-        final TextView swipe = (TextView) view.findViewById(R.id.numericalResetContinue);
+        View view = (RelativeLayout)inflater.inflate(R.layout.fragment_numerical_question1, container, false);
+        final Button btn0 = (Button)view.findViewById(R.id.btnZeroNumerical1);
+        final Button btn1 = (Button) view.findViewById(R.id.btnOneNumerical1);
+        final Button btn2 = (Button) view.findViewById(R.id.btnTwoNumerical1);
+        final Button btn3 = (Button) view.findViewById(R.id.btnThreeNumerical1);
+        final Button btn4 = (Button) view.findViewById(R.id.btnFourNumerical1);
+        final Button btn5 = (Button) view.findViewById(R.id.btnFiveNumerical1);
+        final Button btn6 = (Button) view.findViewById(R.id.btnSixNumerical1);
+        final Button btn7 = (Button) view.findViewById(R.id.btnSevenNumerical1);
+        final Button btn8 = (Button) view.findViewById(R.id.btnEightNumerical1);
+        final Button btn9 = (Button) view.findViewById(R.id.btnNineNumerical1);
+        final Button btnPoint = (Button) view.findViewById(R.id.btnPointNumerical1);
+        final ImageButton btnBackspace = (ImageButton) view.findViewById(R.id.backspaceNumerical1);
+        final ImageButton btnReset = (ImageButton) view.findViewById(R.id.btnReset1);
+        final Button dontKnow = (Button) view.findViewById(R.id.btnNumerical1DontKnow);
+        final EditText input = (EditText) view.findViewById(R.id.inputNumerical1);
+        final TextView swipe = (TextView) view.findViewById(R.id.numerical1Continue);
+
+        input.setInputType(InputType.TYPE_NULL);
 
         btn0.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
@@ -131,6 +136,16 @@ public class NumericalResetFragment extends android.support.v4.app.Fragment {
                 }else{
                     return;
                 }
+
+
+            }
+        });
+
+        btnBackspace.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+
+                input.setText(method(input.getText().toString()));
+
             }
         });
 
@@ -141,6 +156,7 @@ public class NumericalResetFragment extends android.support.v4.app.Fragment {
 
             }
         });
+
 
         dontKnow.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
@@ -169,6 +185,8 @@ public class NumericalResetFragment extends android.support.v4.app.Fragment {
                     btn9.setBackgroundColor(Color.argb(50,160, 200, 220));
                     btnPoint.setEnabled(false);
                     btnPoint.setBackgroundColor(Color.argb(50,160, 200, 220));
+                    btnBackspace.setEnabled(false);
+                    btnBackspace.setBackgroundColor(Color.argb(50,160, 200, 220));
                     input.setText("");
                     swipe.setVisibility(View.VISIBLE);
                     dontKnowIsClicked = true;
@@ -196,25 +214,32 @@ public class NumericalResetFragment extends android.support.v4.app.Fragment {
                     btn9.setBackgroundColor(Color.rgb(160, 200, 220));
                     btnPoint.setEnabled(true);
                     btnPoint.setBackgroundColor(Color.rgb(160, 200, 220));
+                    btnBackspace.setEnabled(true);
+                    btnBackspace.setBackgroundColor(Color.rgb(160, 200, 220));
                     dontKnowIsClicked = false;
                 }
 
             }
         });
 
-
-
         return view;
     }
 
-    public NumericalResetFragment(){}
+    public NumericalQuestion1Fragment(){}
 
-    public static NumericalResetFragment newInstance(int index) {
-        NumericalResetFragment f = new NumericalResetFragment();
+    public static NumericalQuestion1Fragment newInstance(int index) {
+        NumericalQuestion1Fragment f = new NumericalQuestion1Fragment();
         Bundle args = new Bundle();
         args.putInt("index", index);
         f.setArguments(args);
         return f;
+    }
+
+    public String method(String str) {
+        if (str.length() > 0) {
+            str = str.substring(0, str.length()-1);
+        }
+        return str;
     }
 
     public boolean isPoint(String str){

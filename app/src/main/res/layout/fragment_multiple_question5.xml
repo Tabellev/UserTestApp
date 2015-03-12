@@ -1,0 +1,68 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    style="@style/FragmentStyle"
+    tools:context="com.example.isabel.usertestapp.MultipleChoiceFragment">
+
+    <ProgressBar
+        android:id="@+id/progressbar5"
+        style="@android:style/Widget.ProgressBar.Horizontal"
+        android:max="10"
+        android:progress="0"
+        android:layout_width="1000dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"/>
+
+
+    <TextView
+        style="@style/TextFieldStyle"
+        android:text="@string/multiple_choice_question5"
+        android:id="@+id/multipleAnswerQuestion5"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="106dp" />
+
+    <Button
+        style="@style/ButtonAnswerStyle"
+        android:text="@string/rosa"
+        android:id="@+id/btnMultiple5AnsOne"
+        android:layout_centerVertical="true"
+        android:layout_toStartOf="@+id/multipleChoice5Continue"
+        android:layout_marginEnd="64dp" />
+
+    <Button
+        style="@style/ButtonAnswerStyle"
+        android:text="@string/grønn"
+        android:id="@+id/btnMultiple5AnsTwo"
+        android:layout_alignTop="@+id/btnMultiple5AnsOne"
+        android:layout_toEndOf="@+id/btnMultiple5AnsOne" />
+
+    <Button
+        style="@style/ButtonAnswerStyle"
+        android:text="@string/hvit"
+        android:id="@+id/btnMultiple5AnsThree"
+        android:layout_alignTop="@+id/btnMultiple5AnsTwo"
+        android:layout_toEndOf="@+id/btnMultiple5AnsTwo" />
+
+    <Button
+        style="@style/ButtonAnswerStyle"
+        android:text="@string/svart"
+        android:id="@+id/btnMultiple5AnsFour"
+        android:layout_alignTop="@+id/btnMultiple5AnsThree"
+        android:layout_toEndOf="@+id/btnMultiple5AnsThree" />
+
+    <Button
+        style="@style/ButtonDontKnowStyle"
+        android:text="@string/answer_dont_know"
+        android:id="@+id/multiple5DontKnow"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true" />
+
+    <TextView
+        style="@style/TextFieldSwipeStyle"
+        android:text="@string/swipe_to_continue"
+        android:id="@+id/multipleChoice5Continue"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:visibility="invisible"/>
+</RelativeLayout>

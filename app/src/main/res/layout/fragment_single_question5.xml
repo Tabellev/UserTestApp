@@ -1,0 +1,56 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    style="@style/FragmentStyle"
+    tools:context="com.example.isabel.guitestapp.SingleChoiceQuestion">
+
+    <ProgressBar
+        android:id="@+id/progressbar2"
+        style="@android:style/Widget.ProgressBar.Horizontal"
+        android:max="10"
+        android:progress="0"
+        android:layout_width="1000dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true" />
+
+    <TextView
+        style="@style/TextFieldStyle"
+        android:text="@string/single_choice_question5"
+        android:id="@+id/singleQuestion5"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="77dp" />
+
+    <Button
+        style="@style/ButtonAnswerStyle"
+        android:text="@string/katt"
+        android:id="@+id/btnAnswer1SingleQuestion5"
+        android:onClick="btnAnswerOption1Clicked"
+        android:layout_centerVertical="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="317dp" />
+
+    <Button
+        style="@style/ButtonAnswerStyle"
+        android:text="@string/lama"
+        android:id="@+id/btnAnswer2SingleQuestion5"
+        android:onClick="btnAnswerOption2Clicked"
+        android:layout_marginStart="125dp"
+        android:layout_alignTop="@+id/btnAnswer1SingleQuestion5"
+        android:layout_toEndOf="@+id/btnAnswer1SingleQuestion5" />
+
+    <Button
+        style="@style/ButtonDontKnowStyle"
+        android:text="@string/answer_dont_know"
+        android:id="@+id/DontKnowSingle5"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true" />
+
+    <TextView
+        style="@style/TextFieldSwipeStyle"
+        android:text="@string/swipe_to_continue"
+        android:id="@+id/singleQuestion5Continue"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:visibility="invisible"/>
+</RelativeLayout>
