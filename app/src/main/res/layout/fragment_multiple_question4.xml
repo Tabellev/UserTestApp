@@ -5,7 +5,7 @@
 
     <TextView
         style="@style/TextFieldStyle"
-        android:text="@string/multiple_choice_question4"
+        android:text="@string/multiple_choice_question1"
         android:id="@+id/multipleAnswerQuestion4"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
@@ -13,31 +13,32 @@
 
     <Button
         style="@style/ButtonAnswerStyle"
-        android:text="@string/sirkel"
+        android:text="@string/multiple1"
         android:id="@+id/btnMultiple4AnsOne"
-        android:layout_alignTop="@+id/btnMultiple4AnsTwo"
-        android:layout_alignStart="@+id/multipleAnswerQuestion4" />
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="120dp"
+        /> <!-- android:layout_marginEnd="64dp" -->
 
     <Button
         style="@style/ButtonAnswerStyle"
-        android:text="@string/firkant"
+        android:text="@string/multiple2"
         android:id="@+id/btnMultiple4AnsTwo"
-        android:layout_alignTop="@+id/btnMultiple4AnsThree"
-        android:layout_toStartOf="@+id/btnMultiple4AnsThree" />
+        android:layout_alignTop="@+id/btnMultiple4AnsOne"
+        android:layout_toEndOf="@+id/btnMultiple4AnsOne" />
 
     <Button
         style="@style/ButtonAnswerStyle"
-        android:text="@string/trekant"
+        android:text="@string/multiple1"
         android:id="@+id/btnMultiple4AnsThree"
-        android:layout_centerVertical="true"
-        android:layout_toStartOf="@+id/btnMultiple4AnsFour" />
+        android:layout_alignTop="@+id/btnMultiple4AnsTwo"
+        android:layout_toEndOf="@+id/btnMultiple4AnsTwo" />
 
     <Button
         style="@style/ButtonAnswerStyle"
-        android:text="@string/stjerne"
+        android:text="@string/multiple2"
         android:id="@+id/btnMultiple4AnsFour"
-        android:layout_centerVertical="true"
-        android:layout_alignEnd="@+id/multiple4DontKnow" />
+        android:layout_alignTop="@+id/btnMultiple4AnsThree"
+        android:layout_toEndOf="@+id/btnMultiple4AnsThree" />
 
     <Button
         style="@style/ButtonDontKnowStyle"

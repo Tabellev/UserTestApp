@@ -21,6 +21,7 @@ import java.util.Vector;
 public class MainActivity extends android.support.v4.app.FragmentActivity {
 
     private PagerAdapter mPagerAdapter;
+    private CustomViewPager pager;
     Fragment f;
     private int oldX;
     private int deltaX = 0;
@@ -66,38 +67,11 @@ public class MainActivity extends android.support.v4.app.FragmentActivity {
         fragments.add(Fragment.instantiate(this, MultipleQuestion7Fragment.class.getName()));
         fragments.add(Fragment.instantiate(this, SessionFinishedFragment.class.getName()));
 
-        //Lagt til for testen.
-        fragments.add(Fragment.instantiate(this, SwipeToStartNewRunFragment.class.getName()));
-        fragments.add(Fragment.instantiate(this, SingleChoiceQuestionFragment.class.getName()));
-        fragments.add(Fragment.instantiate(this, MultipleChoiceFragment.class.getName()));
-        fragments.add(Fragment.instantiate(this, NumericalInputFragment.class.getName()));
-        fragments.add(Fragment.instantiate(this, NumericalResetFragment.class.getName()));
-        fragments.add(Fragment.instantiate(this, SessionFinishedFragment.class.getName()));
-       /* time = (TextView)findViewById(R.id.time);
-        Log.e("NOte: ","MainActivity");*/
         mProgressBar = (ProgressBar)findViewById(R.id.progress);
         this.mPagerAdapter  = new PagerAdapter(super.getSupportFragmentManager(), fragments);
         //
-        final ViewPager pager = (ViewPager)super.findViewById(R.id.viewpager);
+        pager = (CustomViewPager)super.findViewById(R.id.viewpager);
         pager.setAdapter(this.mPagerAdapter);
-        pager.setOnTouchListener(new View.OnTouchListener()
-        {
-            @Override
-            public boolean onTouch(View v, MotionEvent event) {
-
-                if (event.getAction() == MotionEvent.ACTION_MOVE || event.getAction() == MotionEvent.ACTION_DOWN) {
-                    int newX = (int) event.getX();
-                    deltaX = oldX - newX;
-                    oldX = newX;
-                }
-                if (event.getAction() == MotionEvent.ACTION_UP) {
-                    oldX = 0;
-                }
-
-                stopTime = System.currentTimeMillis();
-                return deltaX < 0;
-            }
-            });
 
         pager.setOnPageChangeListener(new  ViewPager.OnPageChangeListener() {
 
@@ -109,14 +83,17 @@ public class MainActivity extends android.support.v4.app.FragmentActivity {
 
             @Override
             public void onPageSelected(int position) {
-                if(position > 12 && position < 23){
-                    mProgressBar.setVisibility(View.VISIBLE);
-                    startCountdownTimer();
-                }
 
-                if(position > 22){
+                    if(position == 11 || position == 12 || position == 23){
+                        mProgressBar.setVisibility(View.GONE);
+                    } else{
+                        mProgressBar.setVisibility(View.VISIBLE);
+                        startCountdownTimer();
+                    }
+
+                /*if(position > 22){
                     mProgressBar.setVisibility(View.GONE);
-                }
+                }*/
 
             }
 
@@ -169,7 +146,7 @@ public class MainActivity extends android.support.v4.app.FragmentActivity {
         c.start();
     }
 
-    CountDownTimer c = new CountDownTimer(10000, 1000) {
+    CountDownTimer c = new CountDownTimer(11000, 1000) {
 
         public void onTick(long millisUntilFinished) {
 
@@ -178,8 +155,61 @@ public class MainActivity extends android.support.v4.app.FragmentActivity {
         }
 
         public void onFinish() {
-            mProgressBar.setProgress(0);
+
+           mProgressBar.setProgress(0);
+
+            if(mPagerAdapter.fragments.get(pager.getCurrentItem()) instanceof MultipleChoiceFragment){
+                ((MultipleChoiceFragment) mPagerAdapter.fragments.get(pager.getCurrentItem())).setUnclickable();
+            } else if( mPagerAdapter.fragments.get(pager.getCurrentItem()) instanceof MultipleQuestion2Fragment){
+                ((MultipleQuestion2Fragment) mPagerAdapter.fragments.get(pager.getCurrentItem())).setUnclickable();
+            } else if( mPagerAdapter.fragments.get(pager.getCurrentItem()) instanceof MultipleQuestion3Fragment){
+                ((MultipleQuestion3Fragment) mPagerAdapter.fragments.get(pager.getCurrentItem())).setUnclickable();
+            } else if( mPagerAdapter.fragments.get(pager.getCurrentItem()) instanceof MultipleQuestion4Fragment){
+                ((MultipleQuestion4Fragment) mPagerAdapter.fragments.get(pager.getCurrentItem())).setUnclickable();
+            } else if( mPagerAdapter.fragments.get(pager.getCurrentItem()) instanceof MultipleQuestion5Fragment){
+                ((MultipleQuestion5Fragment) mPagerAdapter.fragments.get(pager.getCurrentItem())).setUnclickable();
+            } else if( mPagerAdapter.fragments.get(pager.getCurrentItem()) instanceof MultipleQuestion6Fragment){
+                ((MultipleQuestion6Fragment) mPagerAdapter.fragments.get(pager.getCurrentItem())).setUnclickable();
+            } else if( mPagerAdapter.fragments.get(pager.getCurrentItem()) instanceof MultipleQuestion7Fragment){
+                ((MultipleQuestion7Fragment) mPagerAdapter.fragments.get(pager.getCurrentItem())).setUnclickable();
+            } else if( mPagerAdapter.fragments.get(pager.getCurrentItem()) instanceof SingleChoiceQuestionFragment){
+                ((SingleChoiceQuestionFragment) mPagerAdapter.fragments.get(pager.getCurrentItem())).setUnclickable();
+            } else if( mPagerAdapter.fragments.get(pager.getCurrentItem()) instanceof SingleQuestion2Fragment){
+                ((SingleQuestion2Fragment) mPagerAdapter.fragments.get(pager.getCurrentItem())).setUnclickable();
+            } else if( mPagerAdapter.fragments.get(pager.getCurrentItem()) instanceof SingleQuestion3Fragment){
+                ((SingleQuestion3Fragment) mPagerAdapter.fragments.get(pager.getCurrentItem())).setUnclickable();
+            } else if( mPagerAdapter.fragments.get(pager.getCurrentItem()) instanceof SingleQuestion4Fragment){
+                ((SingleQuestion4Fragment) mPagerAdapter.fragments.get(pager.getCurrentItem())).setUnclickable();
+            } else if( mPagerAdapter.fragments.get(pager.getCurrentItem()) instanceof SingleQuestion5Fragment){
+                ((SingleQuestion5Fragment) mPagerAdapter.fragments.get(pager.getCurrentItem())).setUnclickable();
+            } else if( mPagerAdapter.fragments.get(pager.getCurrentItem()) instanceof SingleQuestion6Fragment){
+                ((SingleQuestion6Fragment) mPagerAdapter.fragments.get(pager.getCurrentItem())).setUnclickable();
+            } else if( mPagerAdapter.fragments.get(pager.getCurrentItem()) instanceof NumericalQuestion1Fragment){
+                ((NumericalQuestion1Fragment) mPagerAdapter.fragments.get(pager.getCurrentItem())).setUnclickable();
+            } else if( mPagerAdapter.fragments.get(pager.getCurrentItem()) instanceof NumericalQuestion2Fragment){
+                ((NumericalQuestion2Fragment) mPagerAdapter.fragments.get(pager.getCurrentItem())).setUnclickable();
+            } else if( mPagerAdapter.fragments.get(pager.getCurrentItem()) instanceof NumericalQuestion3Fragment){
+                ((NumericalQuestion3Fragment) mPagerAdapter.fragments.get(pager.getCurrentItem())).setUnclickable();
+            } else if( mPagerAdapter.fragments.get(pager.getCurrentItem()) instanceof NumericalQuestion4Fragment){
+                ((NumericalQuestion4Fragment) mPagerAdapter.fragments.get(pager.getCurrentItem())).setUnclickable();
+            } else if( mPagerAdapter.fragments.get(pager.getCurrentItem()) instanceof NumericalQuestion5Fragment){
+                ((NumericalQuestion5Fragment) mPagerAdapter.fragments.get(pager.getCurrentItem())).setUnclickable();
+            } else if( mPagerAdapter.fragments.get(pager.getCurrentItem()) instanceof NumericalQuestion6Fragment){
+                ((NumericalQuestion6Fragment) mPagerAdapter.fragments.get(pager.getCurrentItem())).setUnclickable();
+            } else if( mPagerAdapter.fragments.get(pager.getCurrentItem()) instanceof NumericalQuestion7Fragment){
+                ((NumericalQuestion7Fragment) mPagerAdapter.fragments.get(pager.getCurrentItem())).setUnclickable();
+            }
+
+            /*String f =  mPagerAdapter.fragments.get(pager.getCurrentItem()).getClass().toString();
+            switch(f){
+            case "class com.example.isabel.usertestapp.MultipleChoiceFragment":
+                ((MultipleChoiceFragment) mPagerAdapter.fragments.get(pager.getCurrentItem())).setUnclickable();
+                break;
+             }*/
         }
+
+
+
 
     };
 

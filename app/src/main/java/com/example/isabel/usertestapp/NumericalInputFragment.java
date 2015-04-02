@@ -5,6 +5,7 @@ import android.graphics.Color;
 import android.net.Uri;
 import android.os.Bundle;
 import android.app.Fragment;
+import android.text.InputType;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -17,6 +18,22 @@ import android.widget.TextView;
 public class NumericalInputFragment extends android.support.v4.app.Fragment {
 
     private Boolean dontKnowIsClicked = false;
+    private Button btn0;
+    private Button btn1;
+    private Button btn2;
+    private Button btn3;
+    private Button btn4;
+    private Button btn5;
+    private Button btn6;
+    private Button btn7;
+    private Button btn8;
+    private Button btn9;
+    private Button btnPoint;
+    private ImageButton btnBackspace;
+    private Button dontKnow;
+    private EditText input;
+    private TextView swipe;
+    private TextView question;
 
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
@@ -25,21 +42,24 @@ public class NumericalInputFragment extends android.support.v4.app.Fragment {
         }
 
         View view = (RelativeLayout)inflater.inflate(R.layout.fragment_numerical_input, container, false);
-        final Button btn0 = (Button)view.findViewById(R.id.btnZero);
-        final Button btn1 = (Button) view.findViewById(R.id.btnOne);
-        final Button btn2 = (Button) view.findViewById(R.id.btnTwo);
-        final Button btn3 = (Button) view.findViewById(R.id.btnThree);
-        final Button btn4 = (Button) view.findViewById(R.id.btnFour);
-        final Button btn5 = (Button) view.findViewById(R.id.btnFive);
-        final Button btn6 = (Button) view.findViewById(R.id.btnSix);
-        final Button btn7 = (Button) view.findViewById(R.id.btnSeven);
-        final Button btn8 = (Button) view.findViewById(R.id.btnEight);
-        final Button btn9 = (Button) view.findViewById(R.id.btnNine);
-        final Button btnPoint = (Button) view.findViewById(R.id.btnPoint);
-        final ImageButton btnBackspace = (ImageButton) view.findViewById(R.id.backspace);
-        final Button dontKnow = (Button) view.findViewById(R.id.btnNumericalDontKnow);
-        final EditText input = (EditText) view.findViewById(R.id.input);
-        final TextView swipe = (TextView) view.findViewById(R.id.numericalContinue);
+        btn0 = (Button)view.findViewById(R.id.btnZero);
+        btn1 = (Button) view.findViewById(R.id.btnOne);
+        btn2 = (Button) view.findViewById(R.id.btnTwo);
+        btn3 = (Button) view.findViewById(R.id.btnThree);
+        btn4 = (Button) view.findViewById(R.id.btnFour);
+        btn5 = (Button) view.findViewById(R.id.btnFive);
+        btn6 = (Button) view.findViewById(R.id.btnSix);
+        btn7 = (Button) view.findViewById(R.id.btnSeven);
+        btn8 = (Button) view.findViewById(R.id.btnEight);
+        btn9 = (Button) view.findViewById(R.id.btnNine);
+        btnPoint = (Button) view.findViewById(R.id.btnPoint);
+        btnBackspace = (ImageButton) view.findViewById(R.id.backspace);
+        dontKnow = (Button) view.findViewById(R.id.btnNumericalDontKnow);
+        input = (EditText) view.findViewById(R.id.input);
+        swipe = (TextView) view.findViewById(R.id.numericalContinue);
+        question = (TextView) view.findViewById(R.id.numericalQuestion1);
+
+        input.setInputType(InputType.TYPE_NULL);
 
         btn0.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
@@ -209,6 +229,8 @@ public class NumericalInputFragment extends android.support.v4.app.Fragment {
 
         return view;
     }
+
+
 
     public NumericalInputFragment(){}
 

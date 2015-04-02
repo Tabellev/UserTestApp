@@ -5,7 +5,7 @@
 
     <TextView
         style="@style/TextFieldStyle"
-        android:text="@string/multiple_choice_question6"
+        android:text="@string/multiple_choice_question1"
         android:id="@+id/multipleAnswerQuestion6"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
@@ -13,31 +13,32 @@
 
     <Button
         style="@style/ButtonAnswerStyle"
-        android:text="@string/jordbær"
+        android:text="@string/multiple1"
         android:id="@+id/btnMultiple6AnsOne"
-        android:layout_alignTop="@+id/btnMultiple6AnsTwo"
-        android:layout_toStartOf="@+id/btnMultiple6AnsTwo" />
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="120dp"
+        /> <!-- android:layout_marginEnd="64dp" -->
 
     <Button
         style="@style/ButtonAnswerStyle"
-        android:text="@string/bringebær"
+        android:text="@string/multiple2"
         android:id="@+id/btnMultiple6AnsTwo"
-        android:layout_alignTop="@+id/btnMultiple6AnsThree"
-        android:layout_toStartOf="@+id/btnMultiple6AnsThree" />
+        android:layout_alignTop="@+id/btnMultiple6AnsOne"
+        android:layout_toEndOf="@+id/btnMultiple6AnsOne" />
 
     <Button
         style="@style/ButtonAnswerStyle"
-        android:text="@string/bjørnebær"
+        android:text="@string/multiple1"
         android:id="@+id/btnMultiple6AnsThree"
-        android:layout_centerVertical="true"
-        android:layout_toStartOf="@+id/btnMultiple6AnsFour" />
+        android:layout_alignTop="@+id/btnMultiple6AnsTwo"
+        android:layout_toEndOf="@+id/btnMultiple6AnsTwo" />
 
     <Button
         style="@style/ButtonAnswerStyle"
-        android:text="@string/blåbær"
+        android:text="@string/multiple2"
         android:id="@+id/btnMultiple6AnsFour"
-        android:layout_centerVertical="true"
-        android:layout_alignEnd="@+id/multiple6DontKnow" />
+        android:layout_alignTop="@+id/btnMultiple6AnsThree"
+        android:layout_toEndOf="@+id/btnMultiple6AnsThree" />
 
     <Button
         style="@style/ButtonDontKnowStyle"

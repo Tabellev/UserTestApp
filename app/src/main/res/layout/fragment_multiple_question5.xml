@@ -1,11 +1,12 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     style="@style/FragmentStyle"
+    android:id="@+id/multipleFragment5"
     tools:context="com.example.isabel.usertestapp.MultipleChoiceFragment">
 
     <TextView
         style="@style/TextFieldStyle"
-        android:text="@string/multiple_choice_question5"
+        android:text="@string/multiple_choice_question1"
         android:id="@+id/multipleAnswerQuestion5"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
@@ -13,29 +14,29 @@
 
     <Button
         style="@style/ButtonAnswerStyle"
-        android:text="@string/rosa"
+        android:text="@string/multiple1"
         android:id="@+id/btnMultiple5AnsOne"
         android:layout_centerVertical="true"
-        android:layout_toStartOf="@+id/multipleChoice5Continue"
-        android:layout_marginEnd="64dp" />
+        android:layout_marginLeft="120dp"
+         /> <!-- android:layout_marginEnd="64dp" -->
 
     <Button
         style="@style/ButtonAnswerStyle"
-        android:text="@string/grønn"
+        android:text="@string/multiple2"
         android:id="@+id/btnMultiple5AnsTwo"
         android:layout_alignTop="@+id/btnMultiple5AnsOne"
         android:layout_toEndOf="@+id/btnMultiple5AnsOne" />
 
     <Button
         style="@style/ButtonAnswerStyle"
-        android:text="@string/hvit"
+        android:text="@string/multiple1"
         android:id="@+id/btnMultiple5AnsThree"
         android:layout_alignTop="@+id/btnMultiple5AnsTwo"
         android:layout_toEndOf="@+id/btnMultiple5AnsTwo" />
 
     <Button
         style="@style/ButtonAnswerStyle"
-        android:text="@string/svart"
+        android:text="@string/multiple2"
         android:id="@+id/btnMultiple5AnsFour"
         android:layout_alignTop="@+id/btnMultiple5AnsThree"
         android:layout_toEndOf="@+id/btnMultiple5AnsThree" />

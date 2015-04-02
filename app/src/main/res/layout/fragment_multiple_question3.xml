@@ -6,7 +6,7 @@
 
     <TextView
         style="@style/TextFieldStyle"
-        android:text="@string/multiple_choice_question3"
+        android:text="@string/multiple_choice_question1"
         android:id="@+id/multipleAnswerQuestion3"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
@@ -14,31 +14,32 @@
 
     <Button
         style="@style/ButtonAnswerStyle"
-        android:text="@string/gul"
+        android:text="@string/multiple1"
         android:id="@+id/btnMultiple3AnsOne"
-        android:layout_alignTop="@+id/btnMultiple3AnsTwo"
-        android:layout_toStartOf="@+id/btnMultiple3AnsTwo" />
-
-    <Button
-        style="@style/ButtonAnswerStyle"
-        android:text="@string/rosa"
-        android:id="@+id/btnMultiple3AnsTwo"
-        android:layout_alignTop="@+id/btnMultiple3AnsThree"
-        android:layout_toStartOf="@+id/btnMultiple3AnsThree" />
-
-    <Button
-        style="@style/ButtonAnswerStyle"
-        android:text="@string/blå"
-        android:id="@+id/btnMultiple3AnsThree"
         android:layout_centerVertical="true"
-        android:layout_toStartOf="@+id/btnMultiple3AnsFour" />
+        android:layout_marginLeft="120dp"
+        /> <!-- android:layout_marginEnd="64dp" -->
 
     <Button
         style="@style/ButtonAnswerStyle"
-        android:text="@string/rød"
+        android:text="@string/multiple2"
+        android:id="@+id/btnMultiple3AnsTwo"
+        android:layout_alignTop="@+id/btnMultiple3AnsOne"
+        android:layout_toEndOf="@+id/btnMultiple3AnsOne" />
+
+    <Button
+        style="@style/ButtonAnswerStyle"
+        android:text="@string/multiple1"
+        android:id="@+id/btnMultiple3AnsThree"
+        android:layout_alignTop="@+id/btnMultiple3AnsTwo"
+        android:layout_toEndOf="@+id/btnMultiple3AnsTwo" />
+
+    <Button
+        style="@style/ButtonAnswerStyle"
+        android:text="@string/multiple2"
         android:id="@+id/btnMultiple3AnsFour"
         android:layout_alignTop="@+id/btnMultiple3AnsThree"
-        android:layout_alignEnd="@+id/multiple3DontKnow" />
+        android:layout_toEndOf="@+id/btnMultiple3AnsThree" />
 
     <Button
         style="@style/ButtonDontKnowStyle"

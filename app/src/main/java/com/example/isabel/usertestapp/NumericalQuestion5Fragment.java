@@ -8,6 +8,7 @@ import android.app.Fragment;
 import android.os.CountDownTimer;
 import android.text.InputType;
 import android.view.LayoutInflater;
+import android.view.MotionEvent;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
@@ -32,10 +33,10 @@ public class NumericalQuestion5Fragment extends android.support.v4.app.Fragment 
     private Button btn9;
     private Button btnPoint;
     private ImageButton btnBackspace;
-    private ImageButton btnReset;
     private Button dontKnow;
     private EditText input;
     private TextView swipe;
+    private TextView question;
 
 
 
@@ -58,93 +59,240 @@ public class NumericalQuestion5Fragment extends android.support.v4.app.Fragment 
         btn9 = (Button) view.findViewById(R.id.btnNineNumerical5);
         btnPoint = (Button) view.findViewById(R.id.btnPointNumerical5);
         btnBackspace = (ImageButton) view.findViewById(R.id.backspaceNumerical5);
-        btnReset = (ImageButton) view.findViewById(R.id.btnReset5);
+        //btnReset = (ImageButton) view.findViewById(R.id.btnReset5);
         dontKnow = (Button) view.findViewById(R.id.btnNumerical5DontKnow);
         input = (EditText) view.findViewById(R.id.inputNumerical5);
         swipe = (TextView) view.findViewById(R.id.numerical5Continue);
+        question = (TextView) view.findViewById(R.id.numericalQuestion5);
 
         input.setInputType(InputType.TYPE_NULL);
 
-        btn0.setOnClickListener(new View.OnClickListener() {
-            public void onClick(View v) {
+        btn0.setOnTouchListener(new View.OnTouchListener() {
+            @Override
+            public boolean onTouch(View v, MotionEvent event) {
+                dontKnow.setBackgroundColor(Color.rgb(160, 200, 220));
 
-                input.setText(input.getText() + "0");
-                swipe.setVisibility(View.VISIBLE);
+                if (event.getAction() == MotionEvent.ACTION_DOWN) {
+                    btn0.setBackgroundColor(Color.rgb(7, 147, 194));
+                    return true;
+                }
+
+                if (event.getAction() == MotionEvent.ACTION_UP) {
+                    btn0.setBackgroundColor(Color.rgb(160, 200, 220));
+                    input.setText(input.getText() + "0");
+                    swipe.setVisibility(View.VISIBLE);
+                    return true;
+                }
+                return true;
             }
         });
 
-        btn1.setOnClickListener(new View.OnClickListener() {
-            public void onClick(View v) {
 
-                input.setText(input.getText() + "1");
-                swipe.setVisibility(View.VISIBLE);
+        btn1.setOnTouchListener(new View.OnTouchListener() {
+            @Override
+            public boolean onTouch(View v, MotionEvent event) {
+                dontKnow.setBackgroundColor(Color.rgb(160, 200, 220));
+
+                if (event.getAction() == MotionEvent.ACTION_DOWN) {
+                    btn1.setBackgroundColor(Color.rgb(7, 147, 194));
+                    return true;
+                }
+
+                if (event.getAction() == MotionEvent.ACTION_UP) {
+                    btn1.setBackgroundColor(Color.rgb(160, 200, 220));
+                    input.setText(input.getText() + "1");
+                    swipe.setVisibility(View.VISIBLE);
+                    return true;
+                }
+                return true;
             }
         });
 
-        btn2.setOnClickListener(new View.OnClickListener() {
-            public void onClick(View v) {
+        btn2.setOnTouchListener(new View.OnTouchListener() {
+            @Override
+            public boolean onTouch(View v, MotionEvent event) {
+                dontKnow.setBackgroundColor(Color.rgb(160, 200, 220));
 
-                input.setText(input.getText() + "2");
-                swipe.setVisibility(View.VISIBLE);
+                if (event.getAction() == MotionEvent.ACTION_DOWN) {
+                    btn2.setBackgroundColor(Color.rgb(7, 147, 194));
+                    return true;
+                }
+
+                if (event.getAction() == MotionEvent.ACTION_UP) {
+                    btn2.setBackgroundColor(Color.rgb(160, 200, 220));
+                    input.setText(input.getText() + "2");
+                    swipe.setVisibility(View.VISIBLE);
+                    return true;
+                }
+                return true;
             }
         });
 
-        btn3.setOnClickListener(new View.OnClickListener() {
-            public void onClick(View v) {
+        btn3.setOnTouchListener(new View.OnTouchListener() {
+            @Override
+            public boolean onTouch(View v, MotionEvent event) {
+                dontKnow.setBackgroundColor(Color.rgb(160, 200, 220));
 
-                input.setText(input.getText() + "3");
-                swipe.setVisibility(View.VISIBLE);
+                if (event.getAction() == MotionEvent.ACTION_DOWN) {
+                    btn3.setBackgroundColor(Color.rgb(7, 147, 194));
+                    return true;
+                }
+
+                if (event.getAction() == MotionEvent.ACTION_UP) {
+                    btn3.setBackgroundColor(Color.rgb(160, 200, 220));
+                    input.setText(input.getText() + "3");
+                    swipe.setVisibility(View.VISIBLE);
+                    return true;
+                }
+                return true;
             }
         });
 
-        btn4.setOnClickListener(new View.OnClickListener() {
-            public void onClick(View v) {
+        btn4.setOnTouchListener(new View.OnTouchListener() {
+            @Override
+            public boolean onTouch(View v, MotionEvent event) {
+                dontKnow.setBackgroundColor(Color.rgb(160, 200, 220));
 
-                input.setText(input.getText() + "4");
-                swipe.setVisibility(View.VISIBLE);
+                if (event.getAction() == MotionEvent.ACTION_DOWN) {
+                    btn4.setBackgroundColor(Color.rgb(7, 147, 194));
+                    return true;
+                }
+
+                if (event.getAction() == MotionEvent.ACTION_UP) {
+                    btn4.setBackgroundColor(Color.rgb(160, 200, 220));
+                    input.setText(input.getText() + "4");
+                    swipe.setVisibility(View.VISIBLE);
+                    return true;
+                }
+                return true;
             }
         });
 
-        btn5.setOnClickListener(new View.OnClickListener() {
-            public void onClick(View v) {
+        btn5.setOnTouchListener(new View.OnTouchListener() {
+            @Override
+            public boolean onTouch(View v, MotionEvent event) {
+                dontKnow.setBackgroundColor(Color.rgb(160, 200, 220));
 
-                input.setText(input.getText() + "5");
-                swipe.setVisibility(View.VISIBLE);
+                if (event.getAction() == MotionEvent.ACTION_DOWN) {
+                    btn5.setBackgroundColor(Color.rgb(7, 147, 194));
+                    return true;
+                }
+
+                if (event.getAction() == MotionEvent.ACTION_UP) {
+                    btn5.setBackgroundColor(Color.rgb(160, 200, 220));
+                    input.setText(input.getText() + "5");
+                    swipe.setVisibility(View.VISIBLE);
+                    return true;
+                }
+                return true;
             }
         });
 
-        btn6.setOnClickListener(new View.OnClickListener() {
-            public void onClick(View v) {
+        btn6.setOnTouchListener(new View.OnTouchListener() {
+            @Override
+            public boolean onTouch(View v, MotionEvent event) {
+                dontKnow.setBackgroundColor(Color.rgb(160, 200, 220));
 
-                input.setText(input.getText() + "6");
-                swipe.setVisibility(View.VISIBLE);
+                if (event.getAction() == MotionEvent.ACTION_DOWN) {
+                    btn6.setBackgroundColor(Color.rgb(7, 147, 194));
+                    return true;
+                }
+
+                if (event.getAction() == MotionEvent.ACTION_UP) {
+                    btn6.setBackgroundColor(Color.rgb(160, 200, 220));
+                    input.setText(input.getText() + "6");
+                    swipe.setVisibility(View.VISIBLE);
+                    return true;
+                }
+                return true;
             }
         });
 
-        btn7.setOnClickListener(new View.OnClickListener() {
-            public void onClick(View v) {
+        btn7.setOnTouchListener(new View.OnTouchListener() {
+            @Override
+            public boolean onTouch(View v, MotionEvent event) {
+                dontKnow.setBackgroundColor(Color.rgb(160, 200, 220));
 
-                input.setText(input.getText() + "7");
-                swipe.setVisibility(View.VISIBLE);
+                if (event.getAction() == MotionEvent.ACTION_DOWN) {
+                    btn7.setBackgroundColor(Color.rgb(7, 147, 194));
+                    return true;
+                }
+
+                if (event.getAction() == MotionEvent.ACTION_UP) {
+                    btn7.setBackgroundColor(Color.rgb(160, 200, 220));
+                    input.setText(input.getText() + "7");
+                    swipe.setVisibility(View.VISIBLE);
+                    return true;
+                }
+                return true;
             }
         });
 
-        btn8.setOnClickListener(new View.OnClickListener() {
-            public void onClick(View v) {
+        btn8.setOnTouchListener(new View.OnTouchListener() {
+            @Override
+            public boolean onTouch(View v, MotionEvent event) {
+                dontKnow.setBackgroundColor(Color.rgb(160, 200, 220));
 
-                input.setText(input.getText() + "8");
-                swipe.setVisibility(View.VISIBLE);
+                if (event.getAction() == MotionEvent.ACTION_DOWN) {
+                    btn8.setBackgroundColor(Color.rgb(7, 147, 194));
+                    return true;
+                }
+
+                if (event.getAction() == MotionEvent.ACTION_UP) {
+                    btn8.setBackgroundColor(Color.rgb(160, 200, 220));
+                    input.setText(input.getText() + "8");
+                    swipe.setVisibility(View.VISIBLE);
+                    return true;
+                }
+                return true;
             }
         });
 
-        btn9.setOnClickListener(new View.OnClickListener() {
-            public void onClick(View v) {
+        btn9.setOnTouchListener(new View.OnTouchListener() {
+            @Override
+            public boolean onTouch(View v, MotionEvent event) {
+                dontKnow.setBackgroundColor(Color.rgb(160, 200, 220));
 
-                input.setText(input.getText() + "9");
-                swipe.setVisibility(View.VISIBLE);
+                if (event.getAction() == MotionEvent.ACTION_DOWN) {
+                    btn9.setBackgroundColor(Color.rgb(7, 147, 194));
+                    return true;
+                }
+
+                if (event.getAction() == MotionEvent.ACTION_UP) {
+                    btn9.setBackgroundColor(Color.rgb(160, 200, 220));
+                    input.setText(input.getText() + "9");
+                    swipe.setVisibility(View.VISIBLE);
+                    return true;
+                }
+                return true;
             }
         });
 
+        btnPoint.setOnTouchListener(new View.OnTouchListener() {
+            @Override
+            public boolean onTouch(View v, MotionEvent event) {
+                dontKnow.setBackgroundColor(Color.rgb(160, 200, 220));
+
+                if (event.getAction() == MotionEvent.ACTION_DOWN) {
+                    btnPoint.setBackgroundColor(Color.rgb(7, 147, 194));
+                    return true;
+                }
+
+                if (event.getAction() == MotionEvent.ACTION_UP) {
+                    btnPoint.setBackgroundColor(Color.rgb(160, 200, 220));
+                    if (!isPoint(input.getText().toString())) {
+                        input.setText(input.getText() + ".");
+                        swipe.setVisibility(View.VISIBLE);
+                    } else {
+                        return true;
+                    }
+                    return true;
+                }
+                return true;
+            }
+        });
+
+        /*
         btnPoint.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
 
@@ -157,90 +305,112 @@ public class NumericalQuestion5Fragment extends android.support.v4.app.Fragment 
 
 
             }
+        });*/
+
+        btnBackspace.setOnTouchListener(new View.OnTouchListener() {
+            @Override
+            public boolean onTouch(View v, MotionEvent event) {
+                dontKnow.setBackgroundColor(Color.rgb(160, 200, 220));
+
+                if(event.getAction() == MotionEvent.ACTION_DOWN){
+                    btnBackspace.setBackgroundColor(Color.rgb(7, 147, 194));
+                }
+
+                if (event.getAction() == MotionEvent.ACTION_UP) {
+                    btnBackspace.setBackgroundColor(Color.rgb(160, 200, 220));
+                    input.setText(method(input.getText().toString()));
+                }
+                return false;
+            }
         });
 
+        btnBackspace.setOnLongClickListener(new View.OnLongClickListener() {
+            @Override
+            public boolean onLongClick(View v) {
+                dontKnow.setBackgroundColor(Color.rgb(160, 200, 220));
+
+                input.setText("");
+                return true;
+            }
+
+        });
+
+
+        /*
         btnBackspace.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
 
                 input.setText(method(input.getText().toString()));
 
             }
-        });
+        });*/
 
-        btnReset.setOnClickListener(new View.OnClickListener() {
+        /*btnReset.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
 
                 input.setText("");
 
             }
-        });
+        });*/
 
 
         dontKnow.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
-
-                if(!dontKnowIsClicked){
-                    dontKnow.setBackgroundColor(Color.rgb(7, 147, 194));
-                    btn0.setEnabled(false);
-                    btn0.setBackgroundColor(Color.argb(50,160, 200, 220));
-                    btn1.setEnabled(false);
-                    btn1.setBackgroundColor(Color.argb(50,160, 200, 220));
-                    btn2.setEnabled(false);
-                    btn2.setBackgroundColor(Color.argb(50,160, 200, 220));
-                    btn3.setEnabled(false);
-                    btn3.setBackgroundColor(Color.argb(50,160, 200, 220));
-                    btn4.setEnabled(false);
-                    btn4.setBackgroundColor(Color.argb(50,160, 200, 220));
-                    btn5.setEnabled(false);
-                    btn5.setBackgroundColor(Color.argb(50,160, 200, 220));
-                    btn6.setEnabled(false);
-                    btn6.setBackgroundColor(Color.argb(50,160, 200, 220));
-                    btn7.setEnabled(false);
-                    btn7.setBackgroundColor(Color.argb(50,160, 200, 220));
-                    btn8.setEnabled(false);
-                    btn8.setBackgroundColor(Color.argb(50,160, 200, 220));
-                    btn9.setEnabled(false);
-                    btn9.setBackgroundColor(Color.argb(50,160, 200, 220));
-                    btnPoint.setEnabled(false);
-                    btnPoint.setBackgroundColor(Color.argb(50,160, 200, 220));
-                    btnBackspace.setEnabled(false);
-                    btnBackspace.setBackgroundColor(Color.argb(50,160, 200, 220));
-                    input.setText("");
-                    swipe.setVisibility(View.VISIBLE);
-                    dontKnowIsClicked = true;
-                }else{
-                    dontKnow.setBackgroundColor(Color.rgb(160, 200, 220));
-                    btn0.setEnabled(true);
-                    btn0.setBackgroundColor(Color.rgb(160, 200, 220));
-                    btn1.setEnabled(true);
-                    btn1.setBackgroundColor(Color.rgb(160, 200, 220));
-                    btn2.setEnabled(true);
-                    btn2.setBackgroundColor(Color.rgb(160, 200, 220));
-                    btn3.setEnabled(true);
-                    btn3.setBackgroundColor(Color.rgb(160, 200, 220));
-                    btn4.setEnabled(true);
-                    btn4.setBackgroundColor(Color.rgb(160, 200, 220));
-                    btn5.setEnabled(true);
-                    btn5.setBackgroundColor(Color.rgb(160, 200, 220));
-                    btn6.setEnabled(true);
-                    btn6.setBackgroundColor(Color.rgb(160, 200, 220));
-                    btn7.setEnabled(true);
-                    btn7.setBackgroundColor(Color.rgb(160, 200, 220));
-                    btn8.setEnabled(true);
-                    btn8.setBackgroundColor(Color.rgb(160, 200, 220));
-                    btn9.setEnabled(true);
-                    btn9.setBackgroundColor(Color.rgb(160, 200, 220));
-                    btnPoint.setEnabled(true);
-                    btnPoint.setBackgroundColor(Color.rgb(160, 200, 220));
-                    btnBackspace.setEnabled(true);
-                    btnBackspace.setBackgroundColor(Color.rgb(160, 200, 220));
-                    dontKnowIsClicked = false;
-                }
-
+                dontKnow.setBackgroundColor(Color.rgb(7, 147, 194));
+                input.setText("");
+                swipe.setVisibility(View.VISIBLE);
             }
         });
 
         return view;
+    }
+
+    public void setUnclickable(){
+        dontKnow.setBackgroundColor(Color.argb(20, 160, 200, 220));
+        dontKnow.setTextColor(Color.argb(20, 255, 255, 255));
+        dontKnow.setEnabled(false);
+        btn0.setEnabled(false);
+        btn0.setBackgroundColor(Color.argb(20, 160, 200, 220));
+        btn0.setTextColor(Color.argb(20, 255, 255, 255));
+        btn1.setEnabled(false);
+        btn1.setBackgroundColor(Color.argb(20, 160, 200, 220));
+        btn1.setTextColor(Color.argb(20, 255, 255, 255));
+        btn2.setEnabled(false);
+        btn2.setBackgroundColor(Color.argb(20, 160, 200, 220));
+        btn2.setTextColor(Color.argb(20, 255, 255, 255));
+        btn3.setEnabled(false);
+        btn3.setBackgroundColor(Color.argb(20, 160, 200, 220));
+        btn3.setTextColor(Color.argb(20, 255, 255, 255));
+        btn4.setEnabled(false);
+        btn4.setBackgroundColor(Color.argb(20, 160, 200, 220));
+        btn4.setTextColor(Color.argb(20, 255, 255, 255));
+        btn5.setEnabled(false);
+        btn5.setBackgroundColor(Color.argb(20, 160, 200, 220));
+        btn5.setTextColor(Color.argb(20, 255, 255, 255));
+        btn6.setEnabled(false);
+        btn6.setBackgroundColor(Color.argb(20, 160, 200, 220));
+        btn6.setTextColor(Color.argb(20, 255, 255, 255));
+        btn7.setEnabled(false);
+        btn7.setBackgroundColor(Color.argb(20, 160, 200, 220));
+        btn7.setTextColor(Color.argb(20, 255, 255, 255));
+        btn8.setEnabled(false);
+        btn8.setBackgroundColor(Color.argb(20, 160, 200, 220));
+        btn8.setTextColor(Color.argb(20, 255, 255, 255));
+        btn9.setEnabled(false);
+        btn9.setBackgroundColor(Color.argb(20, 160, 200, 220));
+        btn9.setTextColor(Color.argb(20, 255, 255, 255));
+        btnPoint.setEnabled(false);
+        btnPoint.setBackgroundColor(Color.argb(20, 160, 200, 220));
+        btnPoint.setTextColor(Color.argb(20, 255, 255, 255));
+        btnBackspace.setEnabled(false);
+        btnBackspace.setBackgroundColor(Color.argb(20, 160, 200, 220));
+        btnBackspace.setImageAlpha(20);
+        question.setTextColor(Color.argb(20,0,0,0));
+        input.setVisibility(View.GONE);
+
+        swipe.setText("<<<Time is up! You must swipe to next question!<<<");
+        swipe.setTextColor(Color.RED);
+        swipe.setVisibility(View.VISIBLE);
     }
 
     public NumericalQuestion5Fragment(){}

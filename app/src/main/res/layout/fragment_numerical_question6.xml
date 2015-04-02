@@ -22,6 +22,108 @@
         android:textAlignment="center"
         android:textSize="30sp" />
 
+    <Button
+        style="@style/ButtonNumberStyle"
+        android:text="@string/one"
+        android:id="@+id/btnOneNumerical6"
+        android:layout_below="@+id/inputNumerical6"
+        android:layout_marginLeft="180dp"
+        android:layout_marginTop="64dp" />
+
+    <Button
+        style="@style/ButtonNumberStyle"
+        android:text="@string/two"
+        android:id="@+id/btnTwoNumerical6"
+        android:layout_alignTop="@+id/btnOneNumerical6"
+        android:layout_toEndOf="@+id/btnOneNumerical6" />
+
+    <Button
+        style="@style/ButtonNumberStyle"
+        android:text="@string/three"
+        android:id="@+id/btnThreeNumerical6"
+        android:layout_alignTop="@+id/btnTwoNumerical6"
+        android:layout_toEndOf="@+id/btnTwoNumerical6" />
+
+    <Button
+        style="@style/ButtonNumberStyle"
+        android:text="@string/four"
+        android:id="@+id/btnFourNumerical6"
+        android:layout_alignTop="@+id/btnThreeNumerical6"
+        android:layout_toEndOf="@+id/btnThreeNumerical6" />
+
+    <Button
+        style="@style/ButtonNumberStyle"
+        android:text="@string/five"
+        android:id="@+id/btnFiveNumerical6"
+        android:layout_alignTop="@+id/btnFourNumerical6"
+        android:layout_toEndOf="@+id/btnFourNumerical6" />
+
+    <ImageButton
+        style="@style/ButtonNumberStyle"
+        android:id="@+id/backspaceNumerical6"
+        android:src="@android:drawable/ic_input_delete"
+        android:scaleType="centerCrop"
+        android:layout_alignTop="@+id/btnFiveNumerical6"
+        android:layout_toEndOf="@+id/btnFiveNumerical6" />
+
+    <Button
+        style="@style/ButtonNumberStyle"
+        android:text="@string/six"
+        android:id="@+id/btnSixNumerical6"
+        android:layout_below="@+id/btnOneNumerical6"
+        android:layout_alignStart="@+id/btnOneNumerical6"
+        android:layout_marginTop="48dp" />
+
+    <Button
+        style="@style/ButtonNumberStyle"
+        android:text="@string/seven"
+        android:id="@+id/btnSevenNumerical6"
+        android:layout_alignTop="@+id/btnSixNumerical6"
+        android:layout_alignStart="@+id/btnTwoNumerical6" />
+
+    <Button
+        style="@style/ButtonNumberStyle"
+        android:text="@string/eight"
+        android:id="@+id/btnEightNumerical6"
+        android:layout_alignTop="@+id/btnSevenNumerical6"
+        android:layout_alignStart="@+id/btnThreeNumerical6" />
+
+    <Button
+        style="@style/ButtonNumberStyle"
+        android:text="@string/nine"
+        android:id="@+id/btnNineNumerical6"
+        android:layout_alignTop="@+id/btnEightNumerical6"
+        android:layout_toEndOf="@+id/btnEightNumerical6" />
+
+    <Button
+        style="@style/ButtonNumberStyle"
+        android:text="@string/zero"
+        android:id="@+id/btnZeroNumerical6"
+        android:layout_alignTop="@+id/btnNineNumerical6"
+        android:layout_alignStart="@+id/btnFiveNumerical6" />
+
+    <Button
+        style="@style/ButtonNumberStyle"
+        android:text="@string/point"
+        android:id="@+id/btnPointNumerical6"
+        android:layout_alignTop="@+id/btnZeroNumerical6"
+        android:layout_alignStart="@+id/backspaceNumerical6" />
+
+    <Button
+        style="@style/ButtonDontKnowStyle"
+        android:text="@string/answer_dont_know"
+        android:id="@+id/btnNumerical6DontKnow"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true" />
+
+    <TextView
+        style="@style/TextFieldSwipeStyle"
+        android:text="@string/swipe_to_continue"
+        android:id="@+id/numerical6Continue"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:visibility="invisible"/>
+    <!--
     <ImageButton
         android:layout_width="50dp"
         android:layout_height="50dp"
@@ -130,5 +232,5 @@
         android:scaleType="centerCrop"
         android:layout_above="@+id/btnPointNumerical6"
         android:layout_toEndOf="@+id/btnFourNumerical6" />
-
+    -->
 </RelativeLayout>

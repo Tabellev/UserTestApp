@@ -13,16 +13,18 @@
 
     <Button
         style="@style/ButtonAnswerStyle"
-        android:text="@string/rosa"
+        android:text="@string/single4answer1"
         android:id="@+id/btnAnswer1SingleQuestion4"
         android:onClick="btnAnswerOption1Clicked"
-        android:layout_centerVertical="true"
+        android:layout_marginLeft="300dp"
+        android:layout_marginTop="250dp" />
+        <!-- android:layout_centerVertical="true"
         android:layout_alignParentStart="true"
-        android:layout_marginStart="317dp" />
+        android:layout_marginStart="317dp" /> -->
 
     <Button
         style="@style/ButtonAnswerStyle"
-        android:text="@string/grønn"
+        android:text="@string/single4answer2"
         android:id="@+id/btnAnswer2SingleQuestion4"
         android:onClick="btnAnswerOption2Clicked"
         android:layout_marginStart="125dp"

@@ -5,7 +5,7 @@
 
     <TextView
         style="@style/TextFieldStyle"
-        android:text="@string/multiple_choice_question7"
+        android:text="@string/multiple_choice_question1"
         android:id="@+id/multipleAnswerQuestion7"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
@@ -13,31 +13,32 @@
 
     <Button
         style="@style/ButtonAnswerStyle"
-        android:text="@string/blå"
+        android:text="@string/multiple1"
         android:id="@+id/btnMultiple7AnsOne"
-        android:layout_alignTop="@+id/btnMultiple7AnsTwo"
-        android:layout_toStartOf="@+id/btnMultiple7AnsTwo" />
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="120dp"
+        /> <!-- android:layout_marginEnd="64dp" -->
 
     <Button
         style="@style/ButtonAnswerStyle"
-        android:text="@string/rød"
+        android:text="@string/multiple2"
         android:id="@+id/btnMultiple7AnsTwo"
-        android:layout_centerVertical="true"
-        android:layout_toStartOf="@+id/btnMultiple7AnsThree" />
+        android:layout_alignTop="@+id/btnMultiple7AnsOne"
+        android:layout_toEndOf="@+id/btnMultiple7AnsOne" />
 
     <Button
         style="@style/ButtonAnswerStyle"
-        android:text="@string/oransje"
+        android:text="@string/multiple1"
         android:id="@+id/btnMultiple7AnsThree"
-        android:layout_centerVertical="true"
-        android:layout_toStartOf="@+id/btnMultiple7AnsFour" />
+        android:layout_alignTop="@+id/btnMultiple7AnsTwo"
+        android:layout_toEndOf="@+id/btnMultiple7AnsTwo" />
 
     <Button
         style="@style/ButtonAnswerStyle"
-        android:text="@string/gul"
+        android:text="@string/multiple2"
         android:id="@+id/btnMultiple7AnsFour"
-        android:layout_centerVertical="true"
-        android:layout_alignEnd="@+id/multipleAnswerQuestion7" />
+        android:layout_alignTop="@+id/btnMultiple7AnsThree"
+        android:layout_toEndOf="@+id/btnMultiple7AnsThree" />
 
     <Button
         style="@style/ButtonDontKnowStyle"

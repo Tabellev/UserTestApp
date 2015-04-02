@@ -6,12 +6,48 @@
 
     <TextView
         style="@style/TextFieldStyle"
-        android:text="@string/mutiple_choice_question1"
+        android:text="@string/multiple_choice_question1"
         android:id="@+id/multipleAnswerQuestion"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="106dp" />
 
+    <Button
+        style="@style/ButtonAnswerStyle"
+        android:text="@string/multiple1"
+        android:id="@+id/btnMulAnsOne"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="120dp"
+        /> <!-- android:layout_marginEnd="64dp" -->
+
+    <Button
+        style="@style/ButtonAnswerStyle"
+        android:text="@string/multiple2"
+        android:id="@+id/btnMulAnsTwo"
+        android:layout_alignTop="@+id/btnMulAnsOne"
+        android:layout_toEndOf="@+id/btnMulAnsOne" />
+
+    <Button
+        style="@style/ButtonAnswerStyle"
+        android:text="@string/multiple1"
+        android:id="@+id/btnMulAnsThree"
+        android:layout_alignTop="@+id/btnMulAnsTwo"
+        android:layout_toEndOf="@+id/btnMulAnsTwo" />
+
+    <Button
+        style="@style/ButtonAnswerStyle"
+        android:text="@string/multiple2"
+        android:id="@+id/btnMulAnsFour"
+        android:layout_alignTop="@+id/btnMulAnsThree"
+        android:layout_toEndOf="@+id/btnMulAnsThree" />
+
+    <Button
+        style="@style/ButtonDontKnowStyle"
+        android:text="@string/answer_dont_know"
+        android:id="@+id/multipleDontKnow"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true" />
+    <!--
     <Button
         style="@style/ButtonAnswerStyle"
         android:text="@string/mcDonalds"
@@ -46,6 +82,7 @@
         android:id="@+id/multipleDontKnow"
         android:layout_alignParentBottom="true"
         android:layout_alignParentEnd="true" />
+    -->
 
     <TextView
         style="@style/TextFieldSwipeStyle"

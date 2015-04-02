@@ -123,6 +123,6 @@
         android:id="@+id/btnReset"
         android:background="@android:drawable/ic_notification_clear_all"
         android:layout_alignTop="@+id/resetInputText"
-        android:layout_toStartOf="@+id/btnResetFour" />
+        android:layout_alignEnd="@+id/resetInputText" />
 
 </RelativeLayout>

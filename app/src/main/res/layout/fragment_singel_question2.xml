@@ -10,20 +10,23 @@
         android:id="@+id/singleQuestion2"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="77dp" />
+        android:layout_marginTop="77dp"
+        android:textAlignment="center" />
 
     <Button
         style="@style/ButtonAnswerStyle"
-        android:text="@string/svømming"
+        android:text="@string/single2answer1"
         android:id="@+id/btnAnswer1SingleQuestion2"
         android:onClick="btnAnswerOption1Clicked"
+        android:layout_marginLeft="300dp"
+        android:layout_marginTop="250dp" />
+        <!-- android:layout_marginStart="229dp"
         android:layout_centerVertical="true"
-        android:layout_alignParentStart="true"
-        android:layout_marginStart="317dp" />
+        android:layout_alignStart="@+id/singleQuestion2" -->
 
     <Button
         style="@style/ButtonAnswerStyle"
-        android:text="@string/jogging"
+        android:text="@string/single2answer2"
         android:id="@+id/btnAnswer2SingleQuestion2"
         android:onClick="btnAnswerOption2Clicked"
         android:layout_marginStart="125dp"

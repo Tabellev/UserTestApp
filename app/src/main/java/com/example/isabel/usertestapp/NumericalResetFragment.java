@@ -5,6 +5,7 @@ import android.graphics.Color;
 import android.net.Uri;
 import android.os.Bundle;
 import android.app.Fragment;
+import android.text.InputType;
 import android.view.LayoutInflater;
 import android.view.MotionEvent;
 import android.view.View;
@@ -41,6 +42,8 @@ public class NumericalResetFragment extends android.support.v4.app.Fragment {
         final Button dontKnow = (Button) view.findViewById(R.id.btnResetDontKnow);
         final EditText input = (EditText) view.findViewById(R.id.resetInputText);
         final TextView swipe = (TextView) view.findViewById(R.id.numericalResetContinue);
+
+        input.setInputType(InputType.TYPE_NULL);
 
         btn0.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {

@@ -5,7 +5,7 @@
     android:layout_height="fill_parent"
     android:orientation="vertical"
     >
-    <android.support.v4.view.ViewPager
+    <com.example.isabel.usertestapp.CustomViewPager
         android:id="@+id/viewpager"
         android:layout_width="fill_parent"
         android:layout_height="fill_parent"
@@ -23,7 +23,7 @@
         android:progress="0"
         android:visibility="gone"
         android:layout_width="match_parent"
-        android:layout_height="10dp"
+        android:layout_height="20dp"
         android:indeterminate="false" />
     </FrameLayout>
 
